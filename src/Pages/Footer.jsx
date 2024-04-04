@@ -8,7 +8,9 @@ import { RiTwitterXFill } from "react-icons/ri";
 import styles from "./Footer.module.css";
 const Footer1 = () => {
   return (
-    <div className={styles.mainContainer} id="footer">
+    <div
+      className={styles.mainContainer}
+      id="footer">
       <div className={styles.container1}>
         <div className={styles.div1a}>
           <p style={{ color: "#009D9A", fontWeight: "bold" }}>
@@ -19,8 +21,7 @@ const Footer1 = () => {
               fontSize: "20px",
               fontWeight: "bold",
               color: "gray",
-            }}
-          >
+            }}>
             Pharmaceutical Innovations & SPIRIT :
           </h1>
           <div className={styles.div1b}>
@@ -37,8 +38,7 @@ const Footer1 = () => {
               flexDirection: "row",
               alignItems: "center",
               flexWrap: "wrap",
-            }}
-          >
+            }}>
             <h1 style={{ color: "#009D9A", fontSize: "16px" }}>
               Mobile :&nbsp;
             </h1>
@@ -53,8 +53,7 @@ const Footer1 = () => {
             <p style={{ fontSize: "18px", color: "gray", fontWeight: "bold" }}>
               <a
                 href="mailto:spiriit@itbhu.ac.in"
-                style={{ textDecoration: "none", color: "black" }}
-              >
+                style={{ textDecoration: "none", color: "black" }}>
                 spirit@iitbhu.ac.in
               </a>
             </p>
@@ -62,40 +61,30 @@ const Footer1 = () => {
         </div>
       </div>
       <div className={styles.buttondiv}>
-        <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLSeZ2-HT7FOcfz6kVT3J68mlnMwSsysBclBma52iBUtJCRx22Q/viewform"
-          target="_blank"
-          style={{ textDecoration: "none" }}
-        >
-          <button className={styles.button}>Register Now</button>
-        </a>
+        <button className={styles.button}>Contact Us</button>
         <div className={styles.atagdiv}>
           <a
             className={styles.atag}
             href="https://www.facebook.com/IITBHUSPIRIT/"
-            target="_blank"
-          >
+            target="_blank">
             <FaFacebookSquare size={30} />
           </a>
           <a
             className={styles.atag}
             href="https://www.instagram.com/spirit.iit.bhu?igsh=bWZnYXpmOXh4MGVx"
-            target="_blank"
-          >
+            target="_blank">
             <FaInstagram size={30} />
           </a>
           <a
             href="https://twitter.com/Spirit_IIT"
             target="_blank"
-            className={styles.atag}
-          >
+            className={styles.atag}>
             <RiTwitterXFill size={30} />
           </a>
           <a
             href="https://www.linkedin.com/company/spiritiitbhu/"
             target="_blank"
-            className={styles.atag}
-          >
+            className={styles.atag}>
             <FaLinkedin size={30} />
           </a>
         </div>

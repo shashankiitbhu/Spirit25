@@ -180,7 +180,16 @@ const About = () => {
       <MainArea />
       <ThirdRow />
       <div className={styles.lastRow}>
-        <button>See Schedule</button>
+        <button>
+          {" "}
+          <a
+            href="https://drive.google.com/file/d/1wAISZmT0aErv4Wzwqk1psbEt5HlSFdes/view"
+            target="_blank"
+            style={{ color: "white" }}>
+            {" "}
+            See Schedule
+          </a>
+        </button>
       </div>
     </div>
   );

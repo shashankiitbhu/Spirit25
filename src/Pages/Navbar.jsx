@@ -34,7 +34,10 @@ const Navbar = () => {
     <section className={styles.wrapper}>
       <div className={styles.nav}>
         <div className={styles.title}>
-          <img src="./images/logo_2.png" alt="" />
+          <img
+            src="./images/logo_2.png"
+            alt=""
+          />
           <h1>SPIRIT'24</h1>
         </div>
         <div className={styles.nav_links}>
@@ -44,15 +47,24 @@ const Navbar = () => {
           <a href="#events">Events</a>
           <a href="#footer">Contact</a>
           <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSeZ2-HT7FOcfz6kVT3J68mlnMwSsysBclBma52iBUtJCRx22Q/viewform"
+            href="https://drive.google.com/file/d/1wAISZmT0aErv4Wzwqk1psbEt5HlSFdes/view"
             target="_blank"
-            style={{ textDecoration: "none" }}
-          >
-            <button className={styles.button}>Register Now!</button>
+            style={{ textDecoration: "none" }}>
+            <button className={styles.button}>Schedule!</button>
           </a>
 
-          {!isOpen && <IoMenu onClick={toggleBtn} className={styles.icons} />}
-          {isOpen && <IoClose onClick={toggleBtn} className={styles.icons} />}
+          {!isOpen && (
+            <IoMenu
+              onClick={toggleBtn}
+              className={styles.icons}
+            />
+          )}
+          {isOpen && (
+            <IoClose
+              onClick={toggleBtn}
+              className={styles.icons}
+            />
+          )}
         </div>
       </div>
       {isOpen && (

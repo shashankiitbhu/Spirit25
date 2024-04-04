@@ -105,6 +105,13 @@ const Speakers = () => {
       logo: "/speakers/janssen.png",
       company: "A2Z4.0 ",
     },
+    {
+      name: "Dr. Prakash Muthudoss",
+      image: "/speakers/sarvesh.jpg",
+      des: "Managing Director",
+      logo: "/speakers/janssen.png",
+      company: "Marichi Ventures ",
+    },
   ];
   return (
     <div

@@ -106,7 +106,7 @@ const Speakers = () => {
       company: "A2Z4.0 ",
     },
     {
-      name: "Dr. Prakash Muthudoss",
+      name: "Sarvesh Singh",
       image: "/speakers/sarvesh.jpg",
       des: "Managing Director",
       logo: "/speakers/janssen.png",

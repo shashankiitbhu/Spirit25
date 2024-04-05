@@ -24,7 +24,7 @@ const Home = () => {
           April 6-7, 2024 | IIT BHU Varanasi
         </div>
         <a
-          href="https://drive.google.com/file/d/1wAISZmT0aErv4Wzwqk1psbEt5HlSFdes/view?usp=sharing"
+          href="https://drive.google.com/file/d/1pYQbkwUnh6I-bSo8-yMyvb_eaDVUHijw/view?usp=sharing"
           target="_blank"
           style={{ textDecoration: "none" }}
           className={styles.button}>

@@ -183,7 +183,7 @@ const About = () => {
         <button>
           {" "}
           <a
-            href="https://drive.google.com/file/d/1wAISZmT0aErv4Wzwqk1psbEt5HlSFdes/view"
+            href="https://drive.google.com/file/d/1pYQbkwUnh6I-bSo8-yMyvb_eaDVUHijw/view?usp=sharing"
             target="_blank"
             style={{ color: "white" }}>
             {" "}

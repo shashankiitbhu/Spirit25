@@ -1,33 +1,48 @@
 /** @format */
 
-import styles from "./Speakers.module.css";
-
 const Card = ({ item }) => {
   return (
-    <div className={styles.card}>
-      <div className={styles.imagecontainer}>
+    <div className="group relative bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 p-6 text-center">
+      {/* Circular Image */}
+      <div className="relative mx-auto w-24 h-24 rounded-full overflow-hidden shadow-md">
         <img
           src={item.image}
-          alt=""
+          alt={item.name}
+          className="w-full h-full object-cover"
+          loading="lazy"
         />
       </div>
 
-      <div className={styles.name}>
-        <h3>{item.name}</h3>
+      {/* Name */}
+      <h3 className="mt-4 text-lg font-semibold text-gray-800 group-hover:text-blue-600 transition-colors duration-300">
+        {item.name}
+      </h3>
+
+      {/* Description */}
+      <p className="mt-2 text-sm text-gray-600">{item.des}</p>
+
+      {/* Company Info */}
+      <div className="mt-4 flex items-center justify-center space-x-3">
+        {item.logo && (
+          <img
+            src={item.logo}
+            alt={`${item.company} logo`}
+            className="h-6 w-6 object-contain"
+            loading="lazy"
+          />
+        )}
+        <h1 className="text-sm font-medium text-gray-700">{item.company}</h1>
       </div>
 
-      <div className={styles.desc}>
-        <p>{item.des}</p>
-      </div>
-      <div className={styles.info}>
-        {/* <img src={item.logo} alt="designation" /> */}
-        <h1>{item.company}</h1>
-      </div>
+      {/* Hover Effect */}
+      <div className="absolute inset-0 bg-blue-500 opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-lg"></div>
     </div>
   );
 };
+
+
 const Speakers = () => {
-  let speakers = [
+  const speakers = [
     {
       name: "Dr. Rajeev Raghuvanshi",
       image: "/speakers/rajeev.png",
@@ -110,23 +125,21 @@ const Speakers = () => {
       image: "/speakers/sarvesh.jpg",
       des: "Managing Director",
       logo: "/speakers/janssen.png",
-      company: "Marichi Ventures ",
+      company: "Marichi Ventures",
     },
   ];
+
   return (
-    <div
-      className={styles.page}
-      id="speakers">
-      <h1>Keynote Speakers</h1>
-      <div className={styles.list}>
-        {speakers.map((item, index) => {
-          return (
-            <Card
-              item={item}
-              key={index}
-            />
-          );
-        })}
+    <div id="speakers" className="py-16 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4">
+        <h1 className="text-3xl font-bold text-gray-800 text-center mb-12">
+          Keynote Speakers
+        </h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {speakers.map((item, index) => (
+            <Card item={item} key={index} />
+          ))}
+        </div>
       </div>
     </div>
   );

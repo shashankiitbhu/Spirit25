@@ -21,7 +21,7 @@ const getIcon = (eventName) => {
 
 const Card = ({ item }) => {
   return (
-    <div className="relative flex flex-col items-center justify-center w-[calc(33%-2rem)] h-[350px] bg-white/50 backdrop-blur-lg rounded-lg shadow-lg transition-transform transform hover:translate-y-[-10px] hover:shadow-2xl group overflow-hidden">
+    <div className="relative flex flex-col items-center justify-center w-full sm:w-[calc(50%-2rem)] lg:w-[calc(33%-2rem)] h-[350px] bg-white/50 backdrop-blur-lg rounded-lg shadow-lg transition-transform transform hover:translate-y-[-10px] hover:shadow-2xl group overflow-hidden">
       {/* Icon Background */}
       <div className="absolute inset-0 flex items-center justify-center z-0">
         {getIcon(item.eventName)}
@@ -66,7 +66,6 @@ const Card = ({ item }) => {
     </div>
   );
 };
-
 
 const Events = () => {
   const eventsDB = [

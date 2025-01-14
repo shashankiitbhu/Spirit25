@@ -121,6 +121,33 @@ const Home = () => {
             </div>
           </div>
         </div>
+        {/* Icons for mobile view */}
+      <div className="absolute inset-0 lg:hidden z-0 opacity-20 pointer-events-none">
+        <div className="absolute top-10 left-10 w-12 h-12 bg-blue-100 rounded-full flex justify-center items-center animate-[float_6s_ease-in-out_infinite]">
+          <FaMicroscope className="text-blue-600 text-2xl" />
+        </div>
+        <div className="absolute top-1/4 right-8 w-16 h-16 bg-blue-200 rounded-full flex justify-center items-center animate-[float_5s_ease-in-out_infinite]">
+          <GiBrain className="text-blue-500 text-3xl" />
+        </div>
+        <div className="absolute bottom-20 right-2 w-14 h-14 bg-blue-300 rounded-full flex justify-center items-center animate-[float_4s_ease-in-out_infinite]">
+          <FaPills className="text-blue-700 text-2xl" />
+        </div>
+        <div className="absolute top-1/2 right-16 w-12 h-12 bg-blue-100 rounded-full flex justify-center items-center animate-[float_6.5s_ease-in-out_infinite]">
+          <FaPrescriptionBottle className="text-blue-400 text-xl" />
+        </div>
+        <div className="absolute top-1/2 right-16 w-12 h-12 bg-blue-100 rounded-full flex justify-center items-center animate-[float_6.5s_ease-in-out_infinite]">
+          <FaMicroscope className="text-blue-400 text-xl" />
+        </div>
+        <div className="absolute bottom-2/4 left-20 w-14 h-14 bg-blue-200 rounded-full flex justify-center items-center animate-[float_6s_ease-in-out_infinite]">
+          <GiChemicalDrop className="text-blue-600 text-2xl" />
+          </div>
+        <div className="absolute top-3/4 left-10 w-14 h-14 bg-blue-200 rounded-full flex justify-center items-center animate-[float_6s_ease-in-out_infinite]">
+          <Syringe className="text-blue-600 text-2xl" />
+          </div>
+          <div className="absolute top-1/4 left-10 w-14 h-14 bg-blue-200 rounded-full flex justify-center items-center animate-[float_6s_ease-in-out_infinite]">
+          <FaDna className="text-blue-600 text-2xl" />
+          </div>
+      </div>
       </div>
     </div>
   );

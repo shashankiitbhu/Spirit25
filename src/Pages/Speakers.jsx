@@ -3,7 +3,6 @@
 const Card = ({ item }) => {
   return (
     <div className="group relative bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 p-6 text-center">
-      {/* Circular Image */}
       <div className="relative mx-auto w-24 h-24 rounded-full overflow-hidden shadow-md">
         <img
           src={item.image}
@@ -12,16 +11,10 @@ const Card = ({ item }) => {
           loading="lazy"
         />
       </div>
-
-      {/* Name */}
-      <h3 className="mt-4 text-lg font-semibold text-gray-800 group-hover:text-blue-600 transition-colors duration-300">
+      <h3 className="mt-4 text-lg font-semibold text-gray-800 group-hover:text-sky-600 transition-colors duration-300">
         {item.name}
       </h3>
-
-      {/* Description */}
       <p className="mt-2 text-sm text-gray-600">{item.des}</p>
-
-      {/* Company Info */}
       <div className="mt-4 flex items-center justify-center space-x-3">
         {item.logo && (
           <img
@@ -33,13 +26,10 @@ const Card = ({ item }) => {
         )}
         <h1 className="text-sm font-medium text-gray-700">{item.company}</h1>
       </div>
-
-      {/* Hover Effect */}
-      <div className="absolute inset-0 bg-blue-500 opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-lg"></div>
+      <div className="absolute inset-0 bg-sky-500 opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-lg"></div>
     </div>
   );
 };
-
 
 const Speakers = () => {
   const speakers = [
@@ -130,9 +120,9 @@ const Speakers = () => {
   ];
 
   return (
-    <div id="speakers" className="py-16 bg-gray-50">
+    <div id="speakers" className="py-16 bg-gradient-to-br from-sky-50 to-white">
       <div className="max-w-7xl mx-auto px-4">
-        <h1 className="text-3xl font-bold text-gray-800 text-center mb-12">
+        <h1 className="text-3xl font-bold text-sky-600 text-center mb-12">
           Keynote Speakers
         </h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

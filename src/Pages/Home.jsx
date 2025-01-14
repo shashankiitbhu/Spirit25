@@ -56,6 +56,35 @@ const Home = () => {
           </div>
         </div>
 
+        <div className="relative w-full mt-12 h-[40vh] opacity-0 animate-[fadeIn_1s_ease-out_1.5s_forwards]">
+          {[
+            { Icon: FaMicroscope, color: "bg-blue-100", textColor: "text-blue-600", top: "5%", left: "5%" },
+            { Icon: GiBrain, color: "bg-blue-200", textColor: "text-blue-500", top: "10%", left: "70%" },
+            { Icon: GiMedicines, color: "bg-blue-300", textColor: "text-blue-700", top: "20%", left: "20%" },
+            { Icon: FaPills, color: "bg-blue-100", textColor: "text-blue-400", bottom: "15%", left: "45%" },
+            { Icon: GiChemicalDrop, color: "bg-blue-200", textColor: "text-blue-600", top: "30%", left: "55%" },
+            { Icon: FaPrescriptionBottle, color: "bg-blue-300", textColor: "text-blue-500", top: "50%", left: "10%" },
+            { Icon: FaDna, color: "bg-blue-100", textColor: "text-blue-700", bottom: "10%", left: "60%" },
+            { Icon: GiSyringe, color: "bg-blue-200", textColor: "text-blue-600", top: "40%", left: "70%" },
+            { Icon: FaMicroscope, color: "bg-blue-100", textColor: "text-blue-600", top: "60%", left: "80%" },
+            { Icon: GiPillDrop, color: "bg-blue-200", textColor: "text-blue-400", top: "70%", left: "30%" },
+          ].map((item, index) => (
+            <div
+              key={index}
+              className={`absolute w-16 h-16 md:w-20 md:h-20 flex items-center justify-center ${item.color} rounded-full shadow-lg animate-[float_6s_ease-in-out_infinite]`}
+              style={{
+                top: item.top || "auto",
+                bottom: item.bottom || "auto",
+                left: item.left || "auto",
+                right: item.right || "auto",
+                opacity: 0.5 - index * 0.05,
+              }}
+            >
+              <item.Icon className={`text-3xl md:text-4xl ${item.textColor}`} />
+            </div>
+          ))}
+        </div>
+
         {/* Right Section - Spread-Out Pharma Icons */}
         <div className="hidden lg:flex w-full lg:w-2/5 h-[80vh] relative">
           <div className="absolute inset-0">

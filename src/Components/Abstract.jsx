@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /** @format */
 import { GiChemicalDrop } from "react-icons/gi"; // Pharmacy-related icon
 import { HiOutlineDocumentText } from "react-icons/hi";

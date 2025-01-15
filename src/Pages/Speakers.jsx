@@ -120,7 +120,7 @@ const Speakers = () => {
   ];
 
   return (
-    <div id="speakers" className="py-16 bg-gradient-to-br from-sky-50 to-white">
+    <div id="speakers" className="py-16 ">
       <div className="max-w-7xl mx-auto px-4">
         <h1 className="text-3xl font-bold text-sky-600 text-center mb-12">
           Keynote Speakers

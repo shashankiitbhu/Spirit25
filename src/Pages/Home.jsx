@@ -21,7 +21,11 @@ const Home = () => {
               <span className="inline-block animate-[textWave_1.5s_ease-in-out_infinite]">Pharmaceutical</span>
               <br />
               <span className="bg-gradient-to-r from-purple-500 to-red-500 text-transparent bg-clip-text">
-                Innovations & Spirit
+                Innovations
+              </span>
+              <br/>
+              <span className="bg-gradient-to-r from-purple-500 to-red-500 text-transparent bg-clip-text">
+                Spirit:
               </span>
             </h1>
             <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text">
@@ -58,14 +62,11 @@ const Home = () => {
 
         <div className="relative w-full mt-12 h-[40vh] opacity-0 animate-[fadeIn_1s_ease-out_1.5s_forwards]">
           {[
-            { Icon: FaMicroscope, color: "bg-blue-100", textColor: "text-blue-600", top: "5%", left: "5%" },
             { Icon: GiBrain, color: "bg-blue-200", textColor: "text-blue-500", top: "10%", left: "70%" },
             { Icon: GiMedicines, color: "bg-blue-300", textColor: "text-blue-700", top: "20%", left: "20%" },
             { Icon: FaPills, color: "bg-blue-100", textColor: "text-blue-400", bottom: "15%", left: "45%" },
-            { Icon: GiChemicalDrop, color: "bg-blue-200", textColor: "text-blue-600", top: "30%", left: "55%" },
             { Icon: FaPrescriptionBottle, color: "bg-blue-300", textColor: "text-blue-500", top: "50%", left: "10%" },
             { Icon: FaDna, color: "bg-blue-100", textColor: "text-blue-700", bottom: "10%", left: "60%" },
-            { Icon: GiSyringe, color: "bg-blue-200", textColor: "text-blue-600", top: "40%", left: "70%" },
             { Icon: FaMicroscope, color: "bg-blue-100", textColor: "text-blue-600", top: "60%", left: "80%" },
             { Icon: GiPillDrop, color: "bg-blue-200", textColor: "text-blue-400", top: "70%", left: "30%" },
           ].map((item, index) => (
@@ -128,17 +129,9 @@ const Home = () => {
             </div>
 
             {/* Additional Icons */}
-            <div className="absolute top-20 right-1/3 w-12 h-12 bg-blue-200 rounded-full flex justify-center items-center shadow-lg animate-[float_6.2s_ease-in-out_infinite]">
-              <FaPrescriptionBottle className="text-blue-500 text-2xl" />
-            </div>
+            
 
-            <div className="absolute bottom-1/3 left-1/4 w-14 h-14 bg-blue-300 rounded-full flex justify-center items-center shadow-lg animate-[float_5.8s_ease-in-out_infinite]">
-              <GiPillDrop className="text-blue-700 text-2xl" />
-            </div>
 
-            <div className="absolute top-1/4 left-1/3 w-16 h-16 bg-blue-100 rounded-full flex justify-center items-center shadow-lg animate-[float_6.3s_ease-in-out_infinite]">
-              <Syringe className="text-blue-600 text-3xl" />
-            </div>
 
             <div className="absolute top-1/2 left-2/3 w-16 h-16 bg-blue-100 rounded-full flex justify-center items-center shadow-lg animate-[float_6.3s_ease-in-out_infinite]">
               <GiSyringe className="text-blue-600 text-3xl" />

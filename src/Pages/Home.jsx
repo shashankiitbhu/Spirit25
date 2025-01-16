@@ -7,9 +7,9 @@ import { GiSyringe, GiBrain, GiVial } from 'react-icons/gi';
 
 const Home = () => {
   return (
-    <div className="min-h-screen w-full pt-20 relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-white">
+    <div className="min-h-screen w-full pt-20 relative ">
       {/* Main Content */}
-      <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center">
+      <div className="container mx-auto px-8 flex flex-col lg:flex-row items-center">
         {/* Left Section */}
         <div className="w-full lg:w-3/5 space-y-8 py-16 lg:py-24 relative z-10">
           {/* Title Section */}

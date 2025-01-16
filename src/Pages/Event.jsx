@@ -157,7 +157,7 @@ const Events = () => {
   ];
 
   return (
-    <div id="events" className="py-16 bg-gradient-to-br from-gray-50 to-sky-50">
+    <div id="events" className="py-16">
       <style>{styles}</style>
       <div className="container mx-auto mb-8">
         <Abstract />

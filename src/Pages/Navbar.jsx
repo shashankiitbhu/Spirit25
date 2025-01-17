@@ -8,8 +8,17 @@ const Navbar = () => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    const debounce = (fn, delay) => {
+      let timer;
+      return (...args) => {
+        clearTimeout(timer);
+        timer = setTimeout(() => fn(...args), delay);
+      };
+    };
+    const debouncedScroll = debounce(handleScroll, 100);
+
+    window.addEventListener("scroll", debouncedScroll);
+    return () => window.removeEventListener("scroll", debouncedScroll);
   }, []);
 
   const navItems = [
@@ -38,7 +47,7 @@ const Navbar = () => {
                 alt="Spirit'25 Logo"
                 className="h-12 w-12"
               />
-              <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
+              <span className="text-2xl font-bold bg-gradient-to-r from-sky-600 to-sky-400 bg-clip-text text-transparent">
                 SPIRIT'25
               </span>
             </div>
@@ -49,28 +58,30 @@ const Navbar = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-gray-700 hover:text-blue-500 transition-colors relative group font-medium"
+                  className="text-gray-700 hover:text-sky-500 transition-colors relative group font-medium"
                 >
                   {item.name}
-                  <span className="absolute inset-x-0 bottom-0 h-0.5 bg-blue-400 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300" />
+                  <span className="absolute inset-x-0 bottom-0 h-0.5 bg-sky-400 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300" />
                 </a>
               ))}
               <a
                 href="https://drive.google.com/file/d/1pYQbkwUnh6I-bSo8-yMyvb_eaDVUHijw/view"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative px-8 py-3 text-lg overflow-hidden rounded-full border-2 border-blue-600 text-blue-600 transition-all duration-300 hover:text-white"
+                className="group relative px-8 py-3 text-lg overflow-hidden rounded-full border-2 border-sky-600 text-sky-600 transition-all duration-300 hover:text-white"
               >
                 <span className="relative z-10">Schedule</span>
-                <div className="absolute inset-0 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-full hover:text-white"></div>
+                <div className="absolute inset-0 bg-sky-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-full hover:text-white"></div>
               </a>
             </div>
 
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden text-gray-700 transition-colors duration-200 hover:text-blue-600 text-2xl font-bold p-2"
+              className="md:hidden text-gray-700 transition-colors duration-200 hover:text-sky-600 text-2xl font-bold p-2"
               onClick={() => setIsOpen(!isOpen)}
               aria-label="Toggle menu"
+              aria-expanded={isOpen}
+              aria-controls="mobile-menu"
             >
               {isOpen ? "×" : "☰"}
             </button>
@@ -78,18 +89,21 @@ const Navbar = () => {
 
           {/* Mobile Menu */}
           <div
+            id="mobile-menu"
             className={`md:hidden transition-all duration-300 ease-in-out ${
               isOpen
                 ? "opacity-100 max-h-96"
                 : "opacity-0 max-h-0 overflow-hidden"
             }`}
+            role="menu"
           >
             <div className="px-4 pt-2 pb-4 space-y-2 bg-white/80 backdrop-blur-lg shadow-md rounded-b-lg">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="block px-4 py-2 text-gray-700 hover:bg-blue-100 hover:text-blue-600 rounded-lg transition-colors duration-200"
+                  className="block px-4 py-2 text-gray-700 hover:bg-sky-100 hover:text-sky-600 rounded-lg transition-colors duration-200"
+                  role="menuitem"
                 >
                   {item.name}
                 </a>
@@ -98,10 +112,11 @@ const Navbar = () => {
                 href="https://drive.google.com/file/d/1pYQbkwUnh6I-bSo8-yMyvb_eaDVUHijw/view"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block px-8 py-3 text-center rounded-full border-2 border-blue-600 text-blue-600 transition-all duration-300 hover:text-white group relative overflow-hidden"
+                className="block px-8 py-3 text-center rounded-full border-2 border-sky-600 text-sky-600 transition-all duration-300 hover:text-white group relative overflow-hidden"
+                role="menuitem"
               >
                 <span className="relative z-10">Schedule</span>
-                <div className="absolute inset-0 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-full"></div>
+                <div className="absolute inset-0 bg-sky-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-full"></div>
               </a>
             </div>
           </div>

@@ -8,6 +8,7 @@ import About from "./Pages/About";
 import Home from "./Pages/Home";
 import Speakers from "./Pages/Speakers";
 import Particles from "react-tsparticles";
+import Testimonials from "./Pages/Testimonials";
 import { loadFull } from "tsparticles";
 
 const App = () => {
@@ -25,71 +26,71 @@ const App = () => {
         options={{
           particles: {
             number: {
-              value: 80, // Reduced number of particles for better performance
+              value: 70, 
               density: {
                 enable: true,
-                value_area: 800, // Area for particle distribution
+                value_area: 800, 
               },
             },
             color: {
-              value: "#BFDBFF", // White particles
+              value: "#BFDBFF", 
             },
             shape: {
-              type: "circle", // Circular particles
+              type: "circle", 
             },
             opacity: {
-              value: 0.5, // Semi-transparent particles
+              value: 0.5, 
               random: true,
             },
             size: {
-              value: 3, // Small particle size
+              value: 3,
               random: true,
             },
             lineLinked: {
-              enable: true, // Enable connecting lines
-              distance: 150, // Maximum distance for line connections
-              color: "#93C5FD", // Line color
-              opacity: 0.4, // Line opacity
-              width: 1, // Line width
+              enable: true, 
+              distance: 150, 
+              color: "#38bdf8", 
+              opacity: 0.4,
+              width: 1,
             },
             move: {
               enable: true,
-              speed: 1, // Moderate speed
+              speed: 1, 
               direction: "none",
               random: false,
               straight: false,
               outModes: {
-                default: "out", // Allow particles to re-enter from the opposite side
+                default: "out"
               },
             },
           },
           background: {
-            color: "transparent", // Transparent background
+            color: "transparent",
           },
           fullScreen: {
-            enable: true, // Full-screen coverage
-            zIndex: -1, // Keep particles behind other content
+            enable: true, 
+            zIndex: -1, 
           },
           interactivity: {
             events: {
               onhover: {
                 enable: true,
-                mode: "grab", // Connect particles with a line when hovered
+                mode: "grab", 
               },
               onclick: {
                 enable: true,
-                mode: "push", // Add particles on click
+                mode: "push", 
               },
             },
             modes: {
               grab: {
-                distance: 200, // Distance for grab effect
+                distance: 200, 
                 lineLinked: {
-                  opacity: 0.5, // Line opacity for grab effect
+                  opacity: 0.5, 
                 },
               },
               push: {
-                quantity: 4, // Number of particles added on click
+                quantity: 2, 
               },
             },
           },
@@ -97,13 +98,14 @@ const App = () => {
         className="absolute inset-0 z-0"
       />
 
-      {/* Main App Content */}
+
       <div className="relative z-10">
         <Home />
         <Navbar />
         <About />
         <Speakers />
         <Event />
+        <Testimonials />
         <Footer1 />
       </div>
     </div>

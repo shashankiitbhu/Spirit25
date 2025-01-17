@@ -15,10 +15,10 @@ const Footer1 = () => {
         {/* Left Section */}
         <div className="space-y-4 md:w-2/3 lg:w-1/2 text-center md:text-left">
           <p className="text-sky-500 font-bold text-lg">
-            International Conference on
+            
           </p>
           <h1 className="text-xl md:text-2xl font-bold text-gray-800">
-            Pharmaceutical Innovations & SPIRIT
+            SPIRIT
           </h1>
           <p className="text-sky-500 font-semibold text-lg">
             The Annual Techno-Pharma Conclave
@@ -26,7 +26,7 @@ const Footer1 = () => {
           <div className="mt-6 space-y-2">
             <div className="flex items-center justify-center md:justify-start gap-2">
               <h1 className="text-sky-500 font-medium">Mobile:</h1>
-              <p className="text-gray-700 font-bold text-lg">+91 8319456409</p>
+              <p className="text-gray-700 font-bold text-lg">+91 9370507730</p>
             </div>
             <div className="flex items-center justify-center md:justify-start gap-2">
               <h1 className="text-sky-500 font-medium">Email us:</h1>

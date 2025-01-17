@@ -30,34 +30,34 @@ const Testimonials = () => {
 
   const testimonials = [
     {
-      image: "public/testimonials/Rahul.jpeg",
+      image: "testimonials/Rahul.jpeg",
       name: "Rahul Sharma, Final-Year Student",
       text: "SPIRIT was a transformative experience! The engaging sessions and expert speakers opened up new horizons in pharmaceutical innovation.",
     },
     {
-      image: "public/speakers/rajeev.png",
-      name: "Dr. Jane Smith",
-      text: "An amazing experience, bringing minds together for innovation!",
+      image: "testimonials/HarishRanjan.jpeg",
+      name: "Harish Ranjan, PhD student",
+      text: "A perfect blend of academia and industry. SPIRIT was an incredible opportunity to connect with thought leaders and pioneers in the pharma sector.",
     },
     {
-      image: "public/speakers/panda.png",
-      name: "Prof. Alan Turing",
-      text: "A must-attend event for anyone in the pharmaceutical field.",
+      image:"testimonials/feb2.jpeg",
+      name: "Anant Jain, Biotech Professional",
+      text: "As a young researcher, SPIRIT empowered me with insights, connections, and the confidence to make a mark in the pharma world.",
     },
     {
-        image: "public/speakers/panda.png",
-        name: "Prof. Alan Turing",
-        text: "A must-attend event for anyone in the pharmaceutical field.",
+        image: "testimonials/PramodJain.jpeg",
+        name: "Pramod Dubey, B.Pharm Student",
+        text: "An unforgettable event with enlightening discussions and unmatched networking opportunities. SPIRIT was truly exceptional.",
       },
       {
-        image: "public/speakers/panda.png",
-        name: "Prof. Alan Turing",
-        text: "A must-attend event for anyone in the pharmaceutical field.",
+        image: "testimonials/KamleshKumar.jpeg",
+        name: "Kamlesh Kumar, Industry Professional",
+        text: "The conference was a gateway to cutting-edge knowledge and collaborations. A must-attend for anyone passionate about shaping the future of healthcare",
       },
       {
-        image: "public/speakers/panda.png",
-        name: "Prof. Alan Turing",
-        text: "A must-attend event for anyone in the pharmaceutical field.",
+        image: "testimonials/shreya.jpeg",
+        name: "Shreya Singh, Masters Student",
+        text: "SPIRIT showcased the best of innovation and collaboration, leaving me inspired and motivated to contribute to pharma advancements.",
       },
   ];
 

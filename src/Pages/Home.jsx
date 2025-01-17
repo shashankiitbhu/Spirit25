@@ -15,17 +15,15 @@ const Home = () => {
           {/* Title Section */}
           <div className="space-y-4 opacity-0 animate-[fadeIn_1s_ease-out_forwards]">
             <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-sky-500 to-purple-500 text-transparent bg-clip-text ">
-              International Conference on
+            The Annual Techno-Pharma Conference
             </h2>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight relative z-10">
-              <span className="inline-block animate-[textWave_1.5s_ease-in-out_infinite]">Pharmaceutical</span>
-              <br />
               <span className="bg-gradient-to-r from-purple-500 to-red-500 text-transparent bg-clip-text">
-                Innovations
+                SPIRIT 2025
               </span>
             </h1>
             <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-sky-500 to-purple-500 text-transparent bg-clip-text">
-              The Annual Techno-Pharma Conference
+              Healthcare Synergy: Tradition and Innovation Aligned
             </h2>
           </div>
 

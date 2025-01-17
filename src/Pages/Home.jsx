@@ -22,7 +22,7 @@ const Home = () => {
                 SPIRIT 2025
               </span>
             </h1>
-            <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-sky-500 to-purple-500 text-transparent bg-clip-text">
+            <h2 className="text-xl md:text-xl font-bold bg-gradient-to-r from-sky-500 to-purple-500 text-transparent bg-clip-text">
               Healthcare Synergy: Tradition and Innovation Aligned
             </h2>
           </div>

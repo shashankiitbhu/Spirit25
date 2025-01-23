@@ -47,11 +47,69 @@ const Home = () => {
                 <div className="absolute inset-0 bg-sky-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-full"></div>
               </button>
             </a>
-            <button className="group relative px-8 py-3 text-lg md:text-xl overflow-hidden rounded-full border-2 border-sky-400 text-sky-400 transition-all duration-300 hover:text-white">
-              <span className="relative z-10">Register Now</span>
-              <div className="absolute inset-0 bg-sky-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-full"></div>
-            </button>
+            <a
+              href="/forms-page" 
+              className="inline-block"
+            >
+              <button className="group relative px-8 py-3 text-lg md:text-xl overflow-hidden rounded-full border-2 border-blue-400 text-blue-400 transition-all duration-300 hover:text-white">
+                <span className="relative z-10">Register Now</span>
+                <div className="absolute inset-0 bg-blue-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-full"></div>
+              </button>
+            </a>
+
           </div>
+        </div>
+
+        <div className="relative w-full mt-12 h-[40vh] opacity-0 animate-[fadeIn_1s_ease-out_1.5s_forwards]">
+          {[
+            { Icon: GiBrain, color: "bg-blue-200", textColor: "text-blue-500", top: "10%", left: "70%" },
+            { Icon: GiMedicines, color: "bg-blue-300", textColor: "text-blue-700", top: "20%", left: "20%" },
+            { Icon: FaPills, color: "bg-blue-100", textColor: "text-blue-400", bottom: "15%", left: "45%" },
+            { Icon: FaPrescriptionBottle, color: "bg-blue-300", textColor: "text-blue-500", top: "50%", left: "10%" },
+            { Icon: FaDna, color: "bg-blue-100", textColor: "text-blue-700", bottom: "10%", left: "60%" },
+            { Icon: FaMicroscope, color: "bg-blue-100", textColor: "text-blue-600", top: "60%", left: "80%" },
+            { Icon: GiPillDrop, color: "bg-blue-200", textColor: "text-blue-400", top: "70%", left: "30%" },
+          ].map((item, index) => (
+            <div
+              key={index}
+              className={`absolute w-16 h-16 md:w-20 md:h-20 flex items-center justify-center ${item.color} rounded-full shadow-lg animate-[float_6s_ease-in-out_infinite]`}
+              style={{
+                top: item.top || "auto",
+                bottom: item.bottom || "auto",
+                left: item.left || "auto",
+                right: item.right || "auto",
+                opacity: 0.5 - index * 0.05,
+              }}
+            >
+              <item.Icon className={`text-3xl md:text-4xl ${item.textColor}`} />
+            </div>
+          ))}
+        </div>
+
+        <div className="relative w-full mt-12 h-[40vh] opacity-0 animate-[fadeIn_1s_ease-out_1.5s_forwards]">
+          {[
+            { Icon: GiBrain, color: "bg-blue-200", textColor: "text-blue-500", top: "10%", left: "70%" },
+            { Icon: GiMedicines, color: "bg-blue-300", textColor: "text-blue-700", top: "20%", left: "20%" },
+            { Icon: FaPills, color: "bg-blue-100", textColor: "text-blue-400", bottom: "15%", left: "45%" },
+            { Icon: FaPrescriptionBottle, color: "bg-blue-300", textColor: "text-blue-500", top: "50%", left: "10%" },
+            { Icon: FaDna, color: "bg-blue-100", textColor: "text-blue-700", bottom: "10%", left: "60%" },
+            { Icon: FaMicroscope, color: "bg-blue-100", textColor: "text-blue-600", top: "60%", left: "80%" },
+            { Icon: GiPillDrop, color: "bg-blue-200", textColor: "text-blue-400", top: "70%", left: "30%" },
+          ].map((item, index) => (
+            <div
+              key={index}
+              className={`absolute w-16 h-16 md:w-20 md:h-20 flex items-center justify-center ${item.color} rounded-full shadow-lg animate-[float_6s_ease-in-out_infinite]`}
+              style={{
+                top: item.top || "auto",
+                bottom: item.bottom || "auto",
+                left: item.left || "auto",
+                right: item.right || "auto",
+                opacity: 0.5 - index * 0.05,
+              }}
+            >
+              <item.Icon className={`text-3xl md:text-4xl ${item.textColor}`} />
+            </div>
+          ))}
         </div>
 
         {/* Right Section - Spread-Out Pharma Icons */}

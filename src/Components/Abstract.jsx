@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /** @format */
 import { GiChemicalDrop } from "react-icons/gi";
 import { HiOutlineDocumentText } from "react-icons/hi";

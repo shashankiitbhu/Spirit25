@@ -1,11 +1,17 @@
 import { Syringe } from 'lucide-react';
-import React from 'react';
+import React, { useState } from 'react';
 import { FaMicroscope, FaDna, FaPills, FaPrescriptionBottle } from 'react-icons/fa'; // Icons from react-icons
 import { GiChemicalDrop, GiMedicines, GiPillDrop, GiMedicalPackAlt } from 'react-icons/gi';
 import { GiSyringe, GiBrain, GiVial } from 'react-icons/gi';
 
 
 const Home = () => {
+   const [showMessage, setShowMessage] = useState(false);
+  
+    const handleClick = () => {
+      setShowMessage(true); // Display the "Coming Soon" message
+      //remove this when the schedule is available
+      };
   return (
     <div className="min-h-screen w-full pt-20 relative ">
       {/* Main Content */}
@@ -37,7 +43,7 @@ const Home = () => {
           {/* Buttons */}
           <div className="flex gap-4 opacity-0 animate-[fadeIn_1s_ease-out_1s_forwards]">
             <a
-              href="https://drive.google.com/file/d/1pYQbkwUnh6I-bSo8-yMyvb_eaDVUHijw/view?usp=sharing"
+              onClick={handleClick} //Change this with href when the schedule is available
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block"
@@ -52,6 +58,36 @@ const Home = () => {
               <div className="absolute inset-0 bg-sky-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-full"></div>
             </button>
           </div>
+          {/* Remove this when the new schedule comes */}
+          {showMessage && (
+            <h2 className="mt-3 text-sm text-red-500"><b>Coming Soon</b></h2>
+          )}
+        </div>
+
+        <div className="relative w-full mt-12 h-[40vh] opacity-0 animate-[fadeIn_1s_ease-out_1.5s_forwards]">
+          {[
+            { Icon: GiBrain, color: "bg-blue-200", textColor: "text-blue-500", top: "10%", left: "70%" },
+            { Icon: GiMedicines, color: "bg-blue-300", textColor: "text-blue-700", top: "20%", left: "20%" },
+            { Icon: FaPills, color: "bg-blue-100", textColor: "text-blue-400", bottom: "15%", left: "45%" },
+            { Icon: FaPrescriptionBottle, color: "bg-blue-300", textColor: "text-blue-500", top: "50%", left: "10%" },
+            { Icon: FaDna, color: "bg-blue-100", textColor: "text-blue-700", bottom: "10%", left: "60%" },
+            { Icon: FaMicroscope, color: "bg-blue-100", textColor: "text-blue-600", top: "60%", left: "80%" },
+            { Icon: GiPillDrop, color: "bg-blue-200", textColor: "text-blue-400", top: "70%", left: "30%" },
+          ].map((item, index) => (
+            <div
+              key={index}
+              className={`absolute w-16 h-16 md:w-20 md:h-20 flex items-center justify-center ${item.color} rounded-full shadow-lg animate-[float_6s_ease-in-out_infinite]`}
+              style={{
+                top: item.top || "auto",
+                bottom: item.bottom || "auto",
+                left: item.left || "auto",
+                right: item.right || "auto",
+                opacity: 0.5 - index * 0.05,
+              }}
+            >
+              <item.Icon className={`text-3xl md:text-4xl ${item.textColor}`} />
+            </div>
+          ))}
         </div>
 
         {/* Right Section - Spread-Out Pharma Icons */}
@@ -149,6 +185,7 @@ const Home = () => {
       </div>
     </div>
   );
+  
 };
 
 export default Home;

@@ -11,7 +11,10 @@ const CA = () => {
             </h2>
             <div className="flex flex-col space-y-4 items-center justify-center">
                 <p className="text-gray-700 text-lg text-center">
-                    Do you dream of becoming a leader in your campus community while gaining unmatched exposure to the world of technology and innovation? Step into the role of a Campus Ambassador and transform your passion into impact! This is your chance to represent a cutting-edge organization, unlock exclusive rewards, and grow a powerful network of like-minded visionaries. Let your journey toward leadership and personal growth begin today!
+                    Do you dream of becoming a leader in your campus community while gaining unmatched exposure to the world of technology
+                    and innovation? Step into the role of a Campus Ambassador and transform your passion into impact! This is your chance to
+                    represent a cutting-edge organization, unlock exclusive rewards, and grow a powerful network of like-minded visionaries.
+                    Let your journey toward leadership and personal growth begin today!
                 </p>
                 <button
                     onClick={() => navigate("/caregistration")}

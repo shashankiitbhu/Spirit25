@@ -12,7 +12,12 @@ const CARegistrationPage = () => {
                     Become the face of our organization at your campus and help build an
                     amazing community while enjoying great rewards!
                 </p>
+                <button className="group relative px-8 py-3 text-lg md:text-xl overflow-hidden rounded-full border-2 border-sky-400 text-sky-400 transition-all duration-300 hover:text-white">
+                    <span className="relative z-10">Register AS CA</span>
+                    <div className="absolute inset-0 bg-sky-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-full"></div>
+                </button>
             </div>
+
 
             {/* Incentives Section */}
             <section className="mb-16">

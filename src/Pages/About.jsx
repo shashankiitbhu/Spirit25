@@ -18,7 +18,7 @@ const HeartbeatLine = () => {
            L700,50 L750,20 L800,80 L850,50
            L900,50 L950,20 L1000,80 L1050,50
            L1100,50 L1150,50 L1200,50"
-        stroke="rgba(14, 165, 233, 0.4)" // Fainter blue
+        stroke="rgba(14, 164, 233, 0.88)" // Fainter sky
         strokeWidth="3"
         fill="none"
         initial={{ pathLength: 0 }}
@@ -130,7 +130,7 @@ const About = () => {
   <motion.img
     src="/images/iitbhu.jpg"
     alt="IIT BHU"
-    className="absolute h-full w-full object-cover rounded-lg shadow-lg border-4 border-gradient-to-br from-sky-500 to-blue-500"
+    className="absolute h-full w-full object-cover rounded-lg shadow-lg border-4 border-gradient-to-br from-sky-500 to-sky-500"
     initial={{ opacity: 0, scale: 0.9 }}
     whileInView={{ opacity: 1, scale: 1 }}
     transition={{ duration: 0.5 }}
@@ -231,7 +231,7 @@ const About = () => {
         <motion.a
           href="https://drive.google.com/file/d/1pYQbkwUnh6I-bSo8-yMyvb_eaDVUHijw/view?usp=sharing"
           target="_blank"
-          className="bg-gradient-to-r from-sky-500 to-blue-500 text-white px-6 py-3 rounded-lg font-medium hover:shadow-lg transition-shadow"
+          className="bg-gradient-to-r from-sky-500 to-sky-500 text-white px-6 py-3 rounded-lg font-medium hover:shadow-lg transition-shadow"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >

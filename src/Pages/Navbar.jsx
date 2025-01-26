@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,6 +30,11 @@ const Navbar = () => {
     { name: "CA" , href: "#CA" },
     { name: "Contact", href: "#contact" },
   ];
+  const [showMessage, setShowMessage] = useState(false);
+    
+      const handleClick = () => {
+        setShowMessage(true);
+      }
 
   return (
     <div className="fixed left-0 right-0 top-0 z-[1000]">
@@ -65,7 +71,7 @@ const Navbar = () => {
                   <span className="absolute inset-x-0 bottom-0 h-0.5 bg-sky-400 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300" />
                 </a>
               ))}
-              <a
+              {/* <a
                 href="https://drive.google.com/file/d/1pYQbkwUnh6I-bSo8-yMyvb_eaDVUHijw/view"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -73,7 +79,21 @@ const Navbar = () => {
               >
                 <span className="relative z-10">Schedule</span>
                 <div className="absolute inset-0 bg-sky-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-full hover:text-white"></div>
-              </a>
+              </a> */}
+              <motion.a
+                // href="#"
+                onClick={handleClick}
+                target="_blank"
+                className="group relative px-8 py-3 text-lg md:text-xl overflow-hidden rounded-full border-2 border-blue-400 text-blue-400 transition-all duration-300 hover:text-white hover:bg-blue-400 "
+              // whileHover={{ scale: 1.05 }}
+              // whileTap={{ scale: 0.95 }}
+              >
+                Schedule
+              </motion.a>
+              {/* Coming Soon Message */}
+              {showMessage && (
+                <p className="mt-3 text-sm text-red-500"><b>Coming Soon</b></p>
+              )}
             </div>
 
             {/* Mobile Menu Button */}
@@ -109,7 +129,7 @@ const Navbar = () => {
                   {item.name}
                 </a>
               ))}
-              <a
+              {/* <a
                 href="https://drive.google.com/file/d/1pYQbkwUnh6I-bSo8-yMyvb_eaDVUHijw/view"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -118,7 +138,21 @@ const Navbar = () => {
               >
                 <span className="relative z-10">Schedule</span>
                 <div className="absolute inset-0 bg-sky-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-full"></div>
-              </a>
+              </a> */}
+              <motion.a
+              // href="#"
+              onClick={handleClick}
+              target="_blank"
+              className="group relative px-8 py-3 text-lg md:text-xl overflow-hidden rounded-full border-2 border-blue-400 text-blue-400 transition-all duration-300 hover:text-white hover:bg-blue-400 "
+              // whileHover={{ scale: 1.05 }}
+              // whileTap={{ scale: 0.95 }}
+            >
+              Schedule
+            </motion.a>
+            {/* Coming Soon Message */}
+            {showMessage && (
+              <p className="mt-3 text-sm text-red-500"><b>Coming Soon</b></p>
+            )}
             </div>
           </div>
         </div>

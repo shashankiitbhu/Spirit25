@@ -3,9 +3,12 @@
 import Navbar from "./Pages/Navbar";
 import Event from "./Pages/Event";
 import Footer1 from "./Pages/Footer";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React from "react";
 import About from "./Pages/About";
+import CARegistrationPage from "./Pages/CARegistrationPage";
 import Home from "./Pages/Home";
+import CA from "./Pages/CA";
 import Speakers from "./Pages/Speakers";
 import Particles from "react-tsparticles";
 import Testimonials from "./Pages/Testimonials";
@@ -18,6 +21,7 @@ const App = () => {
   };
 
   return (
+    <Router>
     <div className="relative min-h-screen overflow-hidden">
       {/* Particle Background */}
       <Particles
@@ -98,17 +102,31 @@ const App = () => {
         className="absolute inset-0 z-0"
       />
 
-
+      
       <div className="relative z-10">
-        <Home />
-        <Navbar />
-        <About />
-        <Speakers />
-        <Event />
-        <Testimonials />
-        <Footer1 />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Home />
+                <Navbar />
+                <About />
+                <Speakers />
+                <CA />
+                <Event />
+                <Testimonials />
+                <Footer1 />
+              </>
+            }
+          />
+          {/* CA Registration Page Route */}
+          <Route path="/ca-registration" element={<CARegistrationPage />} />
+        </Routes>
+        </div>
+      
       </div>
-    </div>
+    </Router>
   );
 };
 

@@ -12,7 +12,7 @@ const CA = () => {
             <div className="flex flex-col space-y-4 items-center justify-center ">
                 <div className ="flex flex-row  items-center space-x-4">
                 <img
-                    src="src\assets\CAImage.jpg"
+                    src="CAImage.jpg"
                     alt="Campus Ambassador"
                     className="rounded-full shadow-lg "
                 ></img>

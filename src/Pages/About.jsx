@@ -117,6 +117,12 @@ const StatCounter = ({ value, label }) => (
 );
 
 const About = () => {
+
+  const [showMessage, setShowMessage] = useState(false);
+
+  const handleClick = () => {
+    setShowMessage(true);
+  }
   return (
     <div className="max-w-7xl mx-auto px-4 py-8 space-y-12">
       <div className="flex justify-center">
@@ -229,7 +235,8 @@ const About = () => {
 
       <div className="flex justify-end">
         <motion.a
-          href="https://drive.google.com/file/d/1pYQbkwUnh6I-bSo8-yMyvb_eaDVUHijw/view?usp=sharing"
+          // href="#"
+          onClick={handleClick}
           target="_blank"
           className="bg-gradient-to-r from-sky-500 to-sky-500 text-white px-6 py-3 rounded-lg font-medium hover:shadow-lg transition-shadow"
           whileHover={{ scale: 1.05 }}
@@ -237,6 +244,10 @@ const About = () => {
         >
           See Schedule
         </motion.a>
+        {/* Coming Soon Message */}
+        {showMessage && (
+          <p className="mt-3 text-sm text-red-500"><b>Coming Soon</b></p>
+        )}
       </div>
     </div>
   );

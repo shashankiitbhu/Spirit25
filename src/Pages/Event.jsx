@@ -118,39 +118,41 @@ const Events = () => {
   const eventsDB = [
     {
       eventName: "Poster Presentation",
-      buttontext: "Submit Abstract",
+      buttontext: "Coming Soon",
       buttonlink:
-        "https://docs.google.com/forms/d/e/1FAIpQLSe0pqvjp54J4QdtnqMqnuDJiJW7KBfkS6Kq6o9x3RCVJl2B-g/viewform",
+        // "https://docs.google.com/forms/d/e/1FAIpQLSe0pqvjp54J4QdtnqMqnuDJiJW7KBfkS6Kq6o9x3RCVJl2B-g/viewform",
+        "#",
       targettext: "View Guidelines",
       targetlink: "",
     },
     {
       eventName: "AI Biohackathon",
       buttontext: "Coming Soon",
-      buttonlink: "",
+      buttonlink: "#",
       targettext: "",
       targetlink: "",
     },
     {
       eventName: "Pharm Innovate Case Study",
-      buttontext: "Register",
-      buttonlink: "https://forms.gle/peHFswNGD3m6BVcd8",
+      buttontext: "Coming Soon",
+      buttonlink:"#",
+      // buttonlink: "https://forms.gle/peHFswNGD3m6BVcd8",
       targettext: "",
       targetlink: "",
     },
     {
       eventName: "RxQuest: Quiz",
-      buttontext: "Prelims - 20 Mar",
-      buttonlink: "",
+      buttontext: "Coming Soon",
+      buttonlink: "#",
       targettext: "Pharmacy India App",
       targetlink:
         "https://play.google.com/store/apps/details?id=co.april2019.pindia&hl=en_US&pli=1",
     },
     {
       eventName: "Fabrica: Model Making",
-      buttontext: "Register",
-      buttonlink:
-        "https://docs.google.com/forms/d/e/1FAIpQLScIxhwD3TAbjcgy6QvDfedgKuA0QwvVdy71nKYPoWOWM7s_zA/viewform?usp=sf_link",
+      buttontext: "Coming Soon",
+      buttonlink:"#",
+        // "https://docs.google.com/forms/d/e/1FAIpQLScIxhwD3TAbjcgy6QvDfedgKuA0QwvVdy71nKYPoWOWM7s_zA/viewform?usp=sf_link",
       targettext: "",
       targetlink: "",
     },

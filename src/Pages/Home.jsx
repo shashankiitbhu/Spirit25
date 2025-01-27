@@ -1,11 +1,17 @@
 import { Syringe } from 'lucide-react';
-import React from 'react';
+import React , { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import { FaMicroscope, FaDna, FaPills, FaPrescriptionBottle } from 'react-icons/fa'; // Icons from react-icons
 import { GiChemicalDrop, GiMedicines, GiPillDrop, GiMedicalPackAlt } from 'react-icons/gi';
 import { GiSyringe, GiBrain, GiVial } from 'react-icons/gi';
 
 
 const Home = () => {
+  const [showMessage, setShowMessage] = useState(false);
+  
+    const handleClick = () => {
+      setShowMessage(true);
+    }
   return (
     <div className="min-h-screen w-full pt-20 relative ">
       {/* Main Content */}
@@ -35,18 +41,32 @@ const Home = () => {
           </div>
 
           {/* Buttons */}
-          <div className="flex gap-4 opacity-0 animate-[fadeIn_1s_ease-out_1s_forwards]">
-            <a
-              href="https://drive.google.com/file/d/1pYQbkwUnh6I-bSo8-yMyvb_eaDVUHijw/view?usp=sharing"
+          {/* <a
+            href="https://drive.google.com/file/d/1pYQbkwUnh6I-bSo8-yMyvb_eaDVUHijw/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block"
+          >
+            <button className="group relative px-8 py-3 text-lg md:text-xl overflow-hidden rounded-full border-2 border-sky-600 text-sky-600 transition-all duration-300 hover:text-white">
+              <span className="relative z-10">View Schedule</span>
+              <div className="absolute inset-0 bg-sky-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-full"></div>
+            </button>
+          </a> */}
+          <div className="flex gap-4 opacity-0 animate-[fadeIn_1s_ease-out_1s_forwards] ">
+            <motion.a
+              // href="#"
+              onClick={handleClick}
               target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block"
+              className="group relative px-8 py-3 text-lg md:text-xl overflow-hidden rounded-full border-2 border-blue-400 text-blue-400 transition-all duration-300 hover:text-white hover:bg-blue-400 "
+              // whileHover={{ scale: 1.05 }}
+              // whileTap={{ scale: 0.95 }}
             >
-              <button className="group relative px-8 py-3 text-lg md:text-xl overflow-hidden rounded-full border-2 border-sky-600 text-sky-600 transition-all duration-300 hover:text-white">
-                <span className="relative z-10">View Schedule</span>
-                <div className="absolute inset-0 bg-sky-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-full"></div>
-              </button>
-            </a>
+              View Schedule
+            </motion.a>
+            {/* Coming Soon Message */}
+            {showMessage && (
+              <p className="mt-3 text-sm text-red-500"><b>Coming Soon</b></p>
+            )}
             <button className="group relative px-8 py-3 text-lg md:text-xl overflow-hidden rounded-full border-2 border-sky-400 text-sky-400 transition-all duration-300 hover:text-white">
               <span className="relative z-10">Register Now</span>
               <div className="absolute inset-0 bg-sky-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-full"></div>

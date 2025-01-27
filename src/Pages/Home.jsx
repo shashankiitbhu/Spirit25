@@ -67,10 +67,16 @@ const Home = () => {
             {showMessage && (
               <p className="mt-3 text-sm text-red-500"><b>Coming Soon</b></p>
             )}
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLScvA8sc-eosVlQm7BNMeidlB03mp5K9M4veIgCBRH2XRnqX-A/viewform?usp=header"
+              target="_blank"
+              rel="noopener noreferrer"
+            className='inline-block'>
             <button className="group relative px-8 py-3 text-lg md:text-xl overflow-hidden rounded-full border-2 border-sky-400 text-sky-400 transition-all duration-300 hover:text-white">
               <span className="relative z-10">Register Now</span>
               <div className="absolute inset-0 bg-sky-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-full"></div>
-            </button>
+              </button>
+            </a>
           </div>
         </div>
 

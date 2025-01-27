@@ -15,12 +15,15 @@ const CA = () => {
                     <FaUserFriends className="w-10 h-10 text-sky-500" />
                 </div>
                 <p className="text-gray-700 text-center text-sm leading-relaxed">
-                    Do you dream of becoming a leader in your campus community while gaining unmatched
-                    exposure to the world of technology and innovation? Step into the role of a Campus Ambassador
-                    and transform your passion into impact! This is your chance to <b>represent a cutting-edge
-                    organization, unlock exclusive rewards, and grow a powerful network of like-minded visionaries.</b>
-                    Let your journey toward leadership and personal growth begin today!
+                    Step into the spotlight at the <b>Techno-Pharma Conference</b>—a trailblazing event that fuses technology and pharmaceuticals to shape the future of healthcare.
+                    As a Campus Ambassador, you’ll represent this transformative initiative, spreading its vision across your campus and beyond.<br />
+                    <span className="inline-block mt-2">
+                        This is your chance to be at the forefront of innovation, gain exclusive insights into the pharmaceutical revolution, and connect with industry pioneers.
+                        Take the lead in empowering your community and be a part of an event that’s redefining the future of pharma.
+                        The stage is set—are you ready to lead the change?
+                    </span>
                 </p>
+
                 <button
                     onClick={() => navigate("/ca-registration")}
                     className="relative inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-sky-500 border-2 border-sky-500 rounded-full group hover:text-white transition-all duration-300"

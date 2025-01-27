@@ -111,13 +111,30 @@ const CARegistrationPage = () => {
             />
             {/* Header Section */}
             <div className="relative z-50 text-center mt-12 mb-12">
-                <h1 className="text-5xl font-extrabold text-white drop-shadow-lg">
-                    Join as a Campus Ambassador
-                </h1>
-                <p className="text-lg mt-4 max-w-lg mx-auto">
-                    Become the face of our organization at your campus and help build an
-                    amazing community while enjoying great rewards!
-                </p>
+                <div className="flex items-center justify-center mb-8">
+                    <img
+                        src="public\images\logo_2.png" // Replace with the actual path to your logo
+                        alt="Organization Logo"
+                        className="h-80 w-auto -ml-8 mr-6" // Increased height to 80px and moved left with -ml-8
+                    />
+                    <div>
+                        <h1 className="text-5xl font-extrabold text-white drop-shadow-lg">
+                            Join as a Campus Ambassador
+                        </h1>
+                        <p className="text-lg mt-6 max-w-2xl mx-auto text-white leading-relaxed text-center">
+                            <span className="font-bold text-xl block">
+                                Become the face of our organization
+                            </span>
+                            and help spread the word about our innovative Techno-Pharma Conference!
+                            <br />
+                            <span className="inline-block mt-4">
+                                Join a vibrant community, gain valuable experience, and enjoy exciting rewards
+                                while contributing to the future of the pharmaceutical industry.
+                            </span>
+                        </p>
+
+                    </div>
+                </div>
                 <br />
                 <button className="group relative px-10 py-4 text-xl font-semibold text-sky-600 bg-white rounded-full transition-all duration-300 hover:bg-sky-600 hover:text-white">
                     Register Now

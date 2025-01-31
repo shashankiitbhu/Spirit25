@@ -8,10 +8,11 @@ import { GiSyringe, GiBrain, GiVial } from 'react-icons/gi';
 
 const Home = () => {
   const [showMessage, setShowMessage] = useState(false);
-  
-    const handleClick = () => {
-      setShowMessage(true);
-    }
+
+  const handleClick = () => {
+    setShowMessage(true);
+    setTimeout(() => setShowMessage(false), 2000); // Reverts back after 2 sec
+  };
   return (
     <div className="min-h-screen w-full pt-20 relative ">
       {/* Main Content */}
@@ -54,19 +55,17 @@ const Home = () => {
           </a> */}
           <div className="flex gap-4 opacity-0 animate-[fadeIn_1s_ease-out_1s_forwards] ">
             <motion.a
-              // href="#"
               onClick={handleClick}
               target="_blank"
-              className="group relative px-8 py-3 text-lg md:text-xl overflow-hidden rounded-full border-2 border-blue-400 text-blue-400 transition-all duration-300 hover:text-white hover:bg-blue-400 "
-              // whileHover={{ scale: 1.05 }}
-              // whileTap={{ scale: 0.95 }}
+              className="group relative px-8 py-3 text-lg md:text-xl overflow-hidden rounded-full border-2 border-blue-400 text-blue-400 transition-all duration-300 hover:text-white hover:bg-blue-400"
             >
-              View Schedule
+              {showMessage ? (
+                <span className="text-red-500 font-bold">Coming Soon</span>
+              ) : (
+                "View Schedule"
+              )}
             </motion.a>
-            {/* Coming Soon Message */}
-            {showMessage && (
-              <p className="mt-3 text-sm text-red-500"><b>Coming Soon</b></p>
-            )}
+
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLScvA8sc-eosVlQm7BNMeidlB03mp5K9M4veIgCBRH2XRnqX-A/viewform?usp=header"
               target="_blank"

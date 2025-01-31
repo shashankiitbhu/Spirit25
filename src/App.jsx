@@ -3,7 +3,7 @@
 import Navbar from "./Pages/Navbar";
 import Event from "./Pages/Event";
 import Footer1 from "./Pages/Footer";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import React from "react";
 import About from "./Pages/About";
 import CARegistrationPage from "./Pages/CARegistrationPage";

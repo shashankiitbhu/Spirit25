@@ -21,7 +21,7 @@ const Footer1 = () => {
             SPIRIT
           </h1>
           <p className="text-sky-500 font-semibold text-lg">
-            The Annual Techno-Pharma Conclave
+            The Annual Techno-Pharma Conference
           </p>
           <div className="mt-6 space-y-2">
             <div className="flex items-center justify-center md:justify-start gap-2">

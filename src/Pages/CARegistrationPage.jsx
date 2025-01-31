@@ -110,31 +110,29 @@ const CARegistrationPage = () => {
                 className="absolute inset-0 z-0"
             />
             {/* Header Section */}
-            <div className="relative z-50 text-center mt-12 mb-12">
-                <div className="flex items-center justify-center mb-8">
-                    <img
-                        src="public\images\logo_2.png" // Replace with the actual path to your logo
-                        alt="Organization Logo"
-                        className="h-80 w-auto -ml-8 mr-6" // Increased height to 80px and moved left with -ml-8
-                    />
-                    <div>
-                        <h1 className="text-5xl font-extrabold text-white drop-shadow-lg">
-                            Join as a Campus Ambassador
-                        </h1>
-                        <p className="text-lg mt-6 max-w-2xl mx-auto text-white leading-relaxed text-center">
-                            <span className="font-bold text-xl block">
-                                Become the face of our organization
-                            </span>
-                            and help spread the word about our innovative Techno-Pharma Conference!
-                            <br />
-                            <span className="inline-block mt-4">
-                                Join a vibrant community, gain valuable experience, and enjoy exciting rewards
-                                while contributing to the future of the pharmaceutical industry.
-                            </span>
-                        </p>
-
-                    </div>
+            <div className="flex flex-col items-center text-center md:flex-row md:text-left justify-center mb-8">
+                <img
+                    src="./images/logo_2.png"
+                    alt="Organization Logo"
+                    className="h-40 w-auto md:h-80" // Adjust logo size for mobile and larger screens
+                />
+                <div className="mt-4 md:mt-0 md:ml-6">
+                    <h1 className="text-4xl md:text-5xl font-extrabold text-white drop-shadow-lg">
+                        Join as a Campus Ambassador
+                    </h1>
+                    <p className="text-lg mt-4 max-w-2xl mx-auto text-white leading-relaxed">
+                        <span className="font-bold text-xl block">
+                            Become the face of our organization
+                        </span>
+                        and help spread the word about our innovative Techno-Pharma Conference!
+                        <br />
+                        <span className="inline-block mt-4">
+                            Join a vibrant community, gain valuable experience, and enjoy exciting rewards
+                            while contributing to the future of the pharmaceutical industry.
+                        </span>
+                    </p>
                 </div>
+
                 <br />
                 <button className="group relative px-10 py-4 text-xl font-semibold text-sky-600 bg-white rounded-full transition-all duration-300 hover:bg-sky-600 hover:text-white">
                     Register Now
@@ -169,7 +167,7 @@ const CARegistrationPage = () => {
                             gained leadership skills and made lifelong connections."
                         </p>
                         <h4 className="text-right mt-4 font-bold text-sky-600">
-                            — John Doe, IIT BHU
+                            — Ayush Shrivastava, IIT BHU
                         </h4>
                     </div>
                     <div className="bg-white shadow-2xl rounded-lg p-8">
@@ -178,7 +176,7 @@ const CARegistrationPage = () => {
                             grew my network and learned so much."
                         </p>
                         <h4 className="text-right mt-4 font-bold text-sky-600">
-                            — Jane Smith, NIT Trichy
+                            — Shashank Kumar, IIT BHU
                         </h4>
                     </div>
                 </div>

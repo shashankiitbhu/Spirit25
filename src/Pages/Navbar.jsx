@@ -27,7 +27,7 @@ const Navbar = () => {
     { name: "Schedule", href: "#schedule" },
     { name: "Speakers", href: "#speakers" },
     { name: "Events", href: "#events" },
-    { name: "CA" , href: "#CA" },
+    { name: "CA", href: "/#/ca-registration" },
     { name: "Contact", href: "#contact" },
   ];
   const [showMessage, setShowMessage] = useState(false);

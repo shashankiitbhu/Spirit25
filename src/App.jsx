@@ -109,14 +109,13 @@ const App = () => {
             path="/"
             element={
               <>
-                <Home />
-                <Navbar />
-                <About />
-                <Speakers />
-                <CA />
-                <Event />
-                <Testimonials />
-                <Footer1 />
+                <Navbar/>
+                <div id="home"><Home /></div>
+                <div id="about"><About /></div>
+                <div id="speakers"><Speakers /></div>
+                <div id="ca"><CA /></div>
+                <div id="events"><Event /></div>
+                <div id="testimonials"><Testimonials /></div>
               </>
             }
           />

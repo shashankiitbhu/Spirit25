@@ -5,11 +5,13 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const Abstract = () => {
-  const [showMessage, setShowMessage] = useState(false);
-  
-    const handleClick = () => {
-      setShowMessage(true);
-    }
+ const [showMessage, setShowMessage] = useState(false);
+   
+     const handleClick = () => {
+       setShowMessage(true);
+       setTimeout(() => setShowMessage(false), 2000); // Reverts back after 2 sec
+     };
+ 
   return (
     <div className="flex items-center justify-center bg-white px-4 py-10">
       <div className="relative card-gradient mx-auto flex flex-col lg:flex-row items-center gap-8 py-8 px-6 rounded-lg shadow-lg">
@@ -39,26 +41,16 @@ const Abstract = () => {
               <HiOutlineDocumentText className="mr-2 text-xl" />
               Submit Now
             </a> */}
-            <motion.a
-              // href="#"
-              onClick={handleClick}
-              target="_blank"
-              className="bg-gradient-to-r from-sky-500 to-sky-500 text-white px-6 py-3 rounded-lg font-medium hover:shadow-lg transition-shadow"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Submit Now
-            </motion.a>
-            {/* Coming Soon Message */}
-            {showMessage && (
-              <p className="mt-3 text-sm text-red-500"><b>Coming Soon</b></p>
-            )}
-
-            {/* Deadline */}
-            <p className="text-sky-600 text-sm font-medium">
-              <span className="text-red-600 font-semibold">DEADLINE:</span> 15
-              March '25
-            </p>
+             <motion.a
+                                  onClick={handleClick}
+                                  target="_blank"
+                      className="bg-gradient-to-r from-sky-500 to-sky-500 text-white px-6 py-3 rounded-lg font-medium hover:shadow-lg transition-shadow"                    >
+                                  {showMessage ? (
+                                    <span className="text-red-500 font-bold">Coming Soon</span>
+                                  ) : (
+                                    "Submit Now"
+                                  )}
+                                </motion.a>
           </div>
         </div>
       </div>

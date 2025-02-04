@@ -102,7 +102,7 @@ const CARegistrationPage = () => {
                         </button>
                     </div>
                     <div className="flex-1 flex justify-center">
-                        <div className="relative w-80 h-80 md:w-96 md:h-96 bg-white/10 backdrop-blur-lg rounded-full 
+                        <div className="relative w-80 h-80 md:w-96 md:h-96 bg-white/10 backdrop-blur-lg
                         flex items-center justify-center overflow-hidden shadow-2xl animate-float">
                             <img
                                 src="./images/logo_2.png"

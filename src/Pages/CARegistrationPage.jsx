@@ -9,6 +9,19 @@ const CARegistrationPage = () => {
         await loadFull(main);
     };
 
+    const testimonials = [
+        {
+            text: '"Being a Campus Ambassador was a life-changing experience! I gained leadership skills and made lifelong connections."',
+            name: 'Ayush Shrivastava',
+            college: 'IIT BHU'
+        },
+        {
+            text: '"This program helped me network with industry experts and enhance my organizational skills significantly."',
+            name: 'Priya Sharma',
+            college: 'NIPER Hyderabad'
+        },
+    ];
+
     const benefits = [
         {
             icon: StarIcon,
@@ -128,18 +141,18 @@ const CARegistrationPage = () => {
                 <div className="container mx-auto px-4">
                     <h2 className="text-4xl font-bold text-center mb-12">Hear From Our Ambassadors</h2>
                     <div className="grid md:grid-cols-2 gap-8">
-                        {[1, 2].map((_, index) => (
+                        {testimonials.map(({ text, name, college }, index) => (
                             <div 
                                 key={index}
                                 className="p-8 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-lg
                                 animate-fade-in"
                             >
-                                <p className="text-xl italic mb-6">"Being a Campus Ambassador was a life-changing experience! I gained leadership skills and made lifelong connections."</p>
+                                <p className="text-xl italic mb-6">{text}</p>
                                 <div className="flex items-center gap-4">
                                     <div className="w-12 h-12 bg-blue-400 rounded-full"></div>
                                     <div>
-                                        <h4 className="font-bold">Ayush Shrivastava</h4>
-                                        <p className="text-sm opacity-75">IIT BHU</p>
+                                        <h4 className="font-bold">{name}</h4>
+                                        <p className="text-sm opacity-75">{college}</p>
                                     </div>
                                 </div>
                             </div>
@@ -147,7 +160,6 @@ const CARegistrationPage = () => {
                     </div>
                 </div>
             </section>
-
             <section className="relative z-10 py-16">
                 <div className="container mx-auto px-4 text-center">
                     <div className="max-w-3xl mx-auto bg-gradient-to-r from-blue-500 to-sky-500 p-1 rounded-2xl">

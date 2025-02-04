@@ -178,15 +178,29 @@ const Home = () => {
                   : "bg-gray-200 text-gray-400 cursor-not-allowed"
               }`}
             >
-              Continue Registration
+              Continue Registration with Referral
             </button>
 
             <button
-              onClick={() => window.open("https://docs.google.com/forms/d/e/1FAIpQLScvA8sc-eosVlQm7BNMeidlB03mp5K9M4veIgCBRH2XRnqX-A/viewform?usp=header", "_blank")}
-              className="w-full py-2.5 text-gray-600 hover:text-gray-800 underline transition-colors"
-            >
-              Continue without referral
-            </button>
+  onClick={() => window.open("https://docs.google.com/forms/d/e/1FAIpQLScvA8sc-eosVlQm7BNMeidlB03mp5K9M4veIgCBRH2XRnqX-A/viewform?usp=header", "_blank")}
+  className="w-full py-3 rounded-lg font-bold bg-gradient-to-r from-sky-400 to-blue-500 hover:from-yellow-300 hover:to-amber-400 transition-all transform hover:scale-[1.02] shadow-lg hover:shadow-xl group"
+>
+  <motion.div 
+    className="text-white flex flex-col items-center justify-center"
+    whileHover={{ scale: 0.98 }}
+  >
+    <div className="flex items-center gap-2">
+      <span className="text-lg">🎉</span>
+      <span className="text-white text-lg">
+        Claim    <span className="animate-pulse inline-block">Early Bird Offer!</span>
+      </span>
+      {/* <span className="text-lg">🐦</span> */}
+    </div>
+    <div className="text-sm font-medium text-amber-100 mt-1 opacity-90 group-hover:opacity-100">
+       Click to Continue Registration
+    </div>
+  </motion.div>
+</button>
           </div>
         </div>
       </div>

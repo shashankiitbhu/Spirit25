@@ -117,12 +117,12 @@ const StatCounter = ({ value, label }) => (
 );
 
 const About = () => {
-
   const [showMessage, setShowMessage] = useState(false);
 
   const handleClick = () => {
     setShowMessage(true);
-  }
+    setTimeout(() => setShowMessage(false), 2000); // Reverts back after 2 sec
+  };
   return (
     <div className="max-w-7xl mx-auto px-4 py-8 space-y-12">
       <div className="flex justify-center">
@@ -150,7 +150,7 @@ const About = () => {
               Welcome to the International Conference on Pharmaceutical Innovations & Spirit
             </h1>
             <p className="text-sky-700">
-              The Techno-Pharma Conclave, a two-day immersive experience hosted by the Department
+              The Techno-Pharma Conference, a two-day immersive experience hosted by the Department
               of Pharmaceutical Engineering and Technology at the prestigious Indian Institute of
               Technology (BHU), Varanasi. In the dynamic landscape of pharmaceuticals and
               biotechnology, innovation is the driving force that propels the industry forward.
@@ -158,7 +158,7 @@ const About = () => {
             </p>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              <StatCounter value="8+" label="SPEAKERS" />
+              <StatCounter value="10+" label="SPEAKERS" />
               <StatCounter value="12th" label="Edition" />
               <StatCounter value="2" label="DAYS" />
               <StatCounter value="5+" label="Events" />
@@ -168,7 +168,7 @@ const About = () => {
       </div>
 
       <div className="space-y-6">
-      <h2 className="text-3xl font-bold text-sky-600 text-center">TRACKS</h2>
+      <h2 className="text-3xl font-bold text-sky-600 text-center">PAST TRACKS</h2>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {[
           {
@@ -235,19 +235,15 @@ const About = () => {
 
       <div className="flex justify-end">
         <motion.a
-          // href="#"
-          onClick={handleClick}
-          target="_blank"
-          className="bg-gradient-to-r from-sky-500 to-sky-500 text-white px-6 py-3 rounded-lg font-medium hover:shadow-lg transition-shadow"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          See Schedule
-        </motion.a>
-        {/* Coming Soon Message */}
-        {showMessage && (
-          <p className="mt-3 text-sm text-red-500"><b>Coming Soon</b></p>
-        )}
+                      onClick={handleClick}
+                      target="_blank"
+          className="bg-gradient-to-r from-sky-500 to-sky-500 text-white px-6 py-3 rounded-lg font-medium hover:shadow-lg transition-shadow"                    >
+                      {showMessage ? (
+                        <span className="text-red-500 font-bold">Coming Soon</span>
+                      ) : (
+                        "See Schedule"
+                      )}
+                    </motion.a>
       </div>
     </div>
   );

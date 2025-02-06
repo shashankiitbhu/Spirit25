@@ -39,6 +39,30 @@ const Footer1 = () => {
                 </a>
               </p>
             </div>
+            <div className="flex:colspan items-center justify-center md:justify gap-2">
+              <h1 className="text-sky-500 font-medium">For Queries:</h1>
+              <div>
+              <h2 className="text-sky-500 font-medium">Events</h2>
+              <p className="text-gray-700 font-bold text-lg">
+                <a
+                  href="mailto:sahil.bharadwaj.phe22@itbhu.ac.in"
+                  className="hover:underline"
+                >
+                  sahil.bharadwaj.phe22@itbhu.ac.in
+                </a>
+              </p>
+              <h2 className="text-sky-500 font-medium">Registrations</h2>
+              <p className="text-gray-700 font-bold text-lg">
+                <a
+                  href="mailto:dhruv.raghav.phe22@itbhu.ac.in"
+                  className="hover:underline"
+                >
+                  dhruv.raghav.phe22@itbhu.ac.in
+                </a>
+                </p>
+                </div>
+            </div>
+
           </div>
         </div>
 

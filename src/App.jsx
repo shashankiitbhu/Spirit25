@@ -116,6 +116,7 @@ const App = () => {
                 <div id="ca"><CA /></div>
                 <div id="events"><Event /></div>
                 <div id="testimonials"><Testimonials /></div>
+                <div id="footer1"><Footer1 /></div>
               </>
             }
           />

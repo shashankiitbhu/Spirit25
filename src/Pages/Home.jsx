@@ -1,5 +1,5 @@
 import { Syringe } from 'lucide-react';
-import React , { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FaMicroscope, FaDna, FaPills, FaPrescriptionBottle } from 'react-icons/fa'; // Icons from react-icons
 import { GiChemicalDrop, GiMedicines, GiPillDrop, GiMedicalPackAlt } from 'react-icons/gi';
@@ -33,7 +33,7 @@ const Home = () => {
           {/* Title Section */}
           <div className="space-y-4 opacity-0 animate-[fadeIn_1s_ease-out_forwards]">
             <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-sky-500 to-purple-500 text-transparent bg-clip-text ">
-            The Annual Techno-Pharma Conference
+              The Annual Techno-Pharma Conference
             </h2>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight relative z-10">
               <span className="bg-gradient-to-r from-purple-500 to-red-500 text-transparent bg-clip-text">
@@ -77,136 +77,145 @@ const Home = () => {
               )}
             </motion.a>
             <button
-            onClick={() => setShowDialog(true)}
-            className="px-8 py-3 rounded-full border-2 border-sky-400 text-sky-400 hover:bg-sky-400 hover:text-white"
-          >
-            Register Now
-          </button>
+              onClick={() => setShowDialog(true)}
+              className="px-8 py-3 rounded-full border-2 border-sky-400 text-sky-400 hover:bg-sky-400 hover:text-white"
+            >
+              Register Now
+            </button>
           </div>
         </div>
         {showDialog && (
-  <motion.div
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 backdrop-blur-sm"
-    onClick={() => setShowDialog(false)}
-  >
-    <motion.div
-      initial={{ scale: 0.5, opacity: 0 }}
-      animate={{ scale: 1, opacity: 1 }}
-      transition={{ type: "spring", stiffness: 300, damping: 20 }}
-      className="bg-gradient-to-br from-white to-blue-50 p-8 rounded-2xl shadow-2xl w-96 relative"
-      onClick={(e) => e.stopPropagation()}
-    >
-      <button
-        onClick={() => setShowDialog(false)}
-        className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 transition-colors"
-      >
-        ✕
-      </button>
-
-      <div className="space-y-6">
-        <div className="text-center space-y-2">
-          <FaDna className="text-4xl text-blue-500 mx-auto mb-4 animate-bounce" />
-          <h2 className="text-2xl font-bold text-gray-800">Referral Verification</h2>
-          <p className="text-gray-600">Enter your referral code to continue</p>
-        </div>
-
-        <div className="space-y-4">
-          <div className="relative">
-            <input
-              type="text"
-              value={referralCode}
-              onChange={(e) => setReferralCode(e.target.value)}
-              className={`w-full p-3 border-2 ${
-                isCodeValid === false ? "border-red-500" : "border-blue-200"
-              } rounded-lg focus:outline-none focus:border-blue-500 transition-all`}
-              placeholder="Enter referral code"
-            />
-            {isCodeValid === true && (
-              <motion.div
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                className="absolute right-3 top-3 text-green-500"
-              >
-                ✓
-              </motion.div>
-            )}
-          </div>
-
-          {isCodeValid === false && (
-            <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="text-red-500 text-sm flex items-center gap-2"
-            >
-              <GiChemicalDrop className="flex-shrink-0" />
-              <span>Invalid referral code. Please try again.</span>
-            </motion.div>
-          )}
-
-          <button
-            onClick={handleVerify}
-            disabled={checking || !referralCode}
-            className={`w-full py-3 rounded-lg font-semibold transition-all ${
-              checking
-                ? "bg-blue-400 cursor-not-allowed"
-                : "bg-blue-500 hover:bg-blue-600"
-            } text-white`}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 backdrop-blur-sm"
+            onClick={() => setShowDialog(false)}
           >
-            {checking ? (
-              <div className="flex items-center justify-center gap-2">
-                <motion.div
-                  animate={{ rotate: 360 }}
-                  transition={{ repeat: Infinity, duration: 1 }}
-                  className="w-5 h-5 border-2 border-white border-t-transparent rounded-full"
-                />
-                Verifying...
-              </div>
-            ) : (
-              "Verify Code"
-            )}
-          </button>
-
-          <div className="space-y-3">
-            <button
-              onClick={() => window.open("https://docs.google.com/forms/d/e/1FAIpQLSeLJH64UyqRWh59RX9tkMvlTdGHM-kU56PHKWUImnLLydSgtg/viewform", "_blank")}
-              disabled={!isCodeValid}
-              className={`w-full py-2.5 rounded-lg font-medium transition-all ${
-                isCodeValid
-                  ? "bg-green-500 hover:bg-green-600 text-white"
-                  : "bg-gray-200 text-gray-400 cursor-not-allowed"
-              }`}
+            <motion.div
+              initial={{ scale: 0.5, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              className="bg-gradient-to-br from-white to-blue-50 p-8 rounded-2xl shadow-2xl w-96 relative"
+              onClick={(e) => e.stopPropagation()}
             >
-              Continue Registration with Referral
-            </button>
+              <button
+                onClick={() => setShowDialog(false)}
+                className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 transition-colors"
+              >
+                ✕
+              </button>
 
-            <button
-  onClick={() => window.open("https://docs.google.com/forms/d/e/1FAIpQLScvA8sc-eosVlQm7BNMeidlB03mp5K9M4veIgCBRH2XRnqX-A/viewform?usp=header", "_blank")}
-  className="w-full py-3 rounded-lg font-bold bg-gradient-to-r from-sky-400 to-blue-500 hover:from-yellow-300 hover:to-amber-400 transition-all transform hover:scale-[1.02] shadow-lg hover:shadow-xl group"
->
-  <motion.div 
-    className="text-white flex flex-col items-center justify-center"
-    whileHover={{ scale: 0.98 }}
-  >
-    <div className="flex items-center gap-2">
-      <span className="text-lg">🎉</span>
-      <span className="text-white text-lg">
-        Claim    <span className="animate-pulse inline-block">Early Bird Offer!</span>
-      </span>
-      {/* <span className="text-lg">🐦</span> */}
-    </div>
-    <div className="text-sm font-medium text-amber-100 mt-1 opacity-90 group-hover:opacity-100">
-       Click to Continue Registration
-    </div>
-  </motion.div>
-</button>
-          </div>
-        </div>
-      </div>
-    </motion.div>
-  </motion.div>
-)}
+              <div className="space-y-6">
+                <div className="text-center space-y-2">
+                  <FaDna className="text-4xl text-blue-500 mx-auto mb-4 animate-bounce" />
+                  <h2 className="text-2xl font-bold text-gray-800">Register Here</h2>
+                  <p className="text-gray-600">Enter your referral code to continue</p>
+                </div>
+
+                <div className="space-y-4">
+                  <div className="relative">
+                    <input
+                      type="text"
+                      value={referralCode}
+                      onChange={(e) => setReferralCode(e.target.value)}
+                      className={`w-full p-3 border-2 ${isCodeValid === false ? "border-red-500" : "border-blue-200"
+                        } rounded-lg focus:outline-none focus:border-blue-500 transition-all`}
+                      placeholder="Enter referral code"
+                    />
+                    {isCodeValid === true && (
+                      <motion.div
+                        initial={{ scale: 0 }}
+                        animate={{ scale: 1 }}
+                        className="absolute right-3 top-3 text-green-500"
+                      >
+                        ✓
+                      </motion.div>
+                    )}
+                  </div>
+
+                  {isCodeValid === false && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      className="text-red-500 text-sm flex items-center gap-2"
+                    >
+                      <GiChemicalDrop className="flex-shrink-0" />
+                      <span>Invalid referral code. Please try again.</span>
+                    </motion.div>
+                  )}
+
+                  <button
+                    onClick={handleVerify}
+                    disabled={checking || !referralCode}
+                    className={`w-full py-3 rounded-lg font-semibold transition-all ${checking
+                        ? "bg-blue-400 cursor-not-allowed"
+                        : "bg-blue-500 hover:bg-blue-600"
+                      } text-white`}
+                  >
+                    {checking ? (
+                      <div className="flex items-center justify-center gap-2">
+                        <motion.div
+                          animate={{ rotate: 360 }}
+                          transition={{ repeat: Infinity, duration: 1 }}
+                          className="w-5 h-5 border-2 border-white border-t-transparent rounded-full"
+                        />
+                        Verifying...
+                      </div>
+                    ) : (
+                      "Verify Code"
+                    )}
+                  </button>
+
+                  <div className="space-y-3">
+                    <button
+                      onClick={() => window.open("https://docs.google.com/forms/d/e/1FAIpQLSeLJH64UyqRWh59RX9tkMvlTdGHM-kU56PHKWUImnLLydSgtg/viewform", "_blank")}
+                      disabled={!isCodeValid}
+                      className={`w-full py-2.5 rounded-lg font-medium transition-all ${isCodeValid
+                          ? "bg-green-500 hover:bg-green-600 text-white"
+                          : "bg-gray-200 text-gray-400 cursor-not-allowed"
+                        }`}
+                    >
+                      Continue Registration with Referral
+                    </button>
+                    <div className="flex items-center justify-center gap-2">
+                      <span className="font-bold">OR</span>
+                    </div>
+
+                    <button
+                      onClick={() => window.open("https://docs.google.com/forms/d/e/1FAIpQLScvA8sc-eosVlQm7BNMeidlB03mp5K9M4veIgCBRH2XRnqX-A/viewform?usp=header", "_blank")}
+                      className="w-full py-3 rounded-lg font-bold bg-gradient-to-r from-sky-400 to-blue-500 hover:from-yellow-300 hover:to-amber-400 transition-all transform hover:scale-[1.02] shadow-lg hover:shadow-xl group"
+                    >
+
+                      <motion.div
+                        className="text-white flex flex-col items-center justify-center"
+                        whileHover={{ scale: 0.98 }}
+                      >
+                        <div className="flex items-center gap-3"> 
+                          <div className="flex items-center gap-3">
+                            <span className="text-lg">🎉</span>
+                            <span className="text-white text-lg font-bold">Claim</span>
+                            <span
+                              className="text-white font-bold animate-pulse"
+                              style={{ color: "#FFFFFF"}}
+                            >
+                              Early Bird Offer!
+                            </span>
+                          </div>
+
+
+                        </div>
+
+                        <div className="text-sm font-medium text-amber-100 mt-1 opacity-90 group-hover:opacity-100">
+                          Click to Continue Registration
+                        </div>
+                      </motion.div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
 
         {/* Right Section - Spread-Out Pharma Icons */}
         <div className="hidden lg:flex w-full lg:w-2/5 h-[80vh] relative">
@@ -274,32 +283,32 @@ const Home = () => {
           </div>
         </div>
         {/* Icons for mobile view */}
-      <div className="absolute inset-0 lg:hidden z-0 opacity-20 pointer-events-none">
-        <div className="absolute top-10 left-10 w-12 h-12 bg-sky-100 rounded-full flex justify-center items-center animate-[float_6s_ease-in-out_infinite]">
-          <FaMicroscope className="text-sky-600 text-2xl" />
-        </div>
-        <div className="absolute top-1/4 right-8 w-16 h-16 bg-sky-200 rounded-full flex justify-center items-center animate-[float_5s_ease-in-out_infinite]">
-          <GiBrain className="text-sky-500 text-3xl" />
-        </div>
-        <div className="absolute bottom-20 right-2 w-14 h-14 bg-sky-300 rounded-full flex justify-center items-center animate-[float_4s_ease-in-out_infinite]">
-          <FaPills className="text-sky-700 text-2xl" />
-        </div>
-        <div className="absolute top-1/2 right-16 w-12 h-12 bg-sky-100 rounded-full flex justify-center items-center animate-[float_6.5s_ease-in-out_infinite]">
-          <FaPrescriptionBottle className="text-sky-400 text-xl" />
-        </div>
-        <div className="absolute top-1/2 right-16 w-12 h-12 bg-sky-100 rounded-full flex justify-center items-center animate-[float_6.5s_ease-in-out_infinite]">
-          <FaMicroscope className="text-sky-400 text-xl" />
-        </div>
-        <div className="absolute bottom-2/4 left-20 w-14 h-14 bg-sky-200 rounded-full flex justify-center items-center animate-[float_6s_ease-in-out_infinite]">
-          <GiChemicalDrop className="text-sky-600 text-2xl" />
+        <div className="absolute inset-0 lg:hidden z-0 opacity-20 pointer-events-none">
+          <div className="absolute top-10 left-10 w-12 h-12 bg-sky-100 rounded-full flex justify-center items-center animate-[float_6s_ease-in-out_infinite]">
+            <FaMicroscope className="text-sky-600 text-2xl" />
           </div>
-        <div className="absolute top-3/4 left-10 w-14 h-14 bg-sky-200 rounded-full flex justify-center items-center animate-[float_6s_ease-in-out_infinite]">
-          <Syringe className="text-sky-600 text-2xl" />
+          <div className="absolute top-1/4 right-8 w-16 h-16 bg-sky-200 rounded-full flex justify-center items-center animate-[float_5s_ease-in-out_infinite]">
+            <GiBrain className="text-sky-500 text-3xl" />
+          </div>
+          <div className="absolute bottom-20 right-2 w-14 h-14 bg-sky-300 rounded-full flex justify-center items-center animate-[float_4s_ease-in-out_infinite]">
+            <FaPills className="text-sky-700 text-2xl" />
+          </div>
+          <div className="absolute top-1/2 right-16 w-12 h-12 bg-sky-100 rounded-full flex justify-center items-center animate-[float_6.5s_ease-in-out_infinite]">
+            <FaPrescriptionBottle className="text-sky-400 text-xl" />
+          </div>
+          <div className="absolute top-1/2 right-16 w-12 h-12 bg-sky-100 rounded-full flex justify-center items-center animate-[float_6.5s_ease-in-out_infinite]">
+            <FaMicroscope className="text-sky-400 text-xl" />
+          </div>
+          <div className="absolute bottom-2/4 left-20 w-14 h-14 bg-sky-200 rounded-full flex justify-center items-center animate-[float_6s_ease-in-out_infinite]">
+            <GiChemicalDrop className="text-sky-600 text-2xl" />
+          </div>
+          <div className="absolute top-3/4 left-10 w-14 h-14 bg-sky-200 rounded-full flex justify-center items-center animate-[float_6s_ease-in-out_infinite]">
+            <Syringe className="text-sky-600 text-2xl" />
           </div>
           <div className="absolute top-1/4 left-10 w-14 h-14 bg-sky-200 rounded-full flex justify-center items-center animate-[float_6s_ease-in-out_infinite]">
-          <FaDna className="text-sky-600 text-2xl" />
+            <FaDna className="text-sky-600 text-2xl" />
           </div>
-      </div>
+        </div>
       </div>
     </div>
   );

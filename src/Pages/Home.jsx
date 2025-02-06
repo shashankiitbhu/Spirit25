@@ -186,29 +186,24 @@ const Home = () => {
                       className="w-full py-3 rounded-lg font-bold bg-gradient-to-r from-sky-400 to-blue-500 hover:from-yellow-300 hover:to-amber-400 transition-all transform hover:scale-[1.02] shadow-lg hover:shadow-xl group"
                     >
 
-                      <motion.div
-                        className="text-white flex flex-col items-center justify-center"
-                        whileHover={{ scale: 0.98 }}
-                      >
-                        <div className="flex items-center gap-3"> 
-                          <div className="flex items-center gap-3">
-                            <span className="text-lg">🎉</span>
-                            <span className="text-white text-lg font-bold">Claim</span>
-                            <span
-                              className="text-white font-bold animate-pulse"
-                              style={{ color: "#FFFFFF"}}
-                            >
-                              Early Bird Offer!
-                            </span>
-                          </div>
-
-
-                        </div>
-
-                        <div className="text-sm font-medium text-amber-100 mt-1 opacity-90 group-hover:opacity-100">
-                          Click to Continue Registration
-                        </div>
-                      </motion.div>
+<motion.div
+    className="text-white-500 font-bold flex flex-col items-center justify-center"
+    whileHover={{ scale: 0.98 }}
+  >
+    <div className="flex items-center gap-3"> 
+      <div className="flex items-center gap-3">
+        <span className="text-white text-lg font-bold">Claim</span>
+        <span
+          className="text-white-500 font-bold animate-pulse"
+        >
+          Early Bird Offer!
+        </span>
+      </div>
+    </div>
+    <div className="text-sm font-medium text-amber-100 mt-1 opacity-90 group-hover:opacity-100">
+      Click to Continue Registration
+    </div>
+  </motion.div>
                     </button>
                   </div>
                 </div>

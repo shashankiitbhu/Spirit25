@@ -62,13 +62,11 @@ const getIcon = (eventName) => {
       return <FaMicroscope className="icon-animation icon-scale-hover icon-theme text-[8rem] opacity-80" />;
     case "AI Biohackathon":
       return <FaBrain className="icon-animation icon-scale-hover icon-theme text-[8rem] opacity-80" />;
-    case "Pharm Innovate Case Study":
+    case "Synapse Strategy":
       return <FaLightbulb className="icon-animation icon-scale-hover icon-theme text-[8rem] opacity-80" />;
-    case "RxQuest: Quiz":
-      return <FaQuestionCircle className="icon-animation icon-scale-hover icon-theme text-[8rem] opacity-80" />;
-    case "Fabrica: Model Making":
-      return <FaTools className="icon-animation icon-scale-hover icon-theme text-[8rem] opacity-80" />;
-    default:
+    // case "RxQuest: Quiz":
+    //   return <FaQuestionCircle className="icon-animation icon-scale-hover icon-theme text-[8rem] opacity-80" />;
+      default:
       return null;
   }
 };
@@ -118,41 +116,24 @@ const Events = () => {
   const eventsDB = [
     {
       eventName: "Poster Presentation",
-      buttontext: "Coming Soon",
-      buttonlink:
-        // "https://docs.google.com/forms/d/e/1FAIpQLSe0pqvjp54J4QdtnqMqnuDJiJW7KBfkS6Kq6o9x3RCVJl2B-g/viewform",
-        "#",
-      targettext: "View Guidelines",
+      buttontext: "Register Here",
+      buttonlink: "https://www.google.com/amp/s/unstop.com/events/canvas-of-innovation-spirit-25-iit-bhu-1384427/amp",
+      targettext: "",
+      // targettext: "View Guidelines",
       targetlink: "",
     },
     {
       eventName: "AI Biohackathon",
-      buttontext: "Coming Soon",
-      buttonlink: "#",
+      buttontext: "Register Here",
+      buttonlink: "https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://unstop.com/hackathons/healthtech-and-ai-hackathon-spirit-25-iit-bhu-1384428&ved=2ahUKEwjE49acyKaLAxUvsFYBHZckAwYQFnoECCAQAQ&usg=AOvVaw0gvumrhAdI1WRWRCyAcZUB",
       targettext: "",
       targetlink: "",
     },
     {
-      eventName: "Pharm Innovate Case Study",
-      buttontext: "Coming Soon",
-      buttonlink:"#",
+      eventName: "Synapse Strategy",
+      buttontext: "Register Here",
+      buttonlink:"https://www.google.com/amp/s/unstop.com/competitions/synapse-strategy-spirit-25-indian-institute-of-technology-banaras-hindu-university-varanasi-1384936/amp",
       // buttonlink: "https://forms.gle/peHFswNGD3m6BVcd8",
-      targettext: "",
-      targetlink: "",
-    },
-    {
-      eventName: "RxQuest: Quiz",
-      buttontext: "Coming Soon",
-      buttonlink: "#",
-      targettext: "Pharmacy India App",
-      targetlink:
-        "https://play.google.com/store/apps/details?id=co.april2019.pindia&hl=en_US&pli=1",
-    },
-    {
-      eventName: "Fabrica: Model Making",
-      buttontext: "Coming Soon",
-      buttonlink:"#",
-        // "https://docs.google.com/forms/d/e/1FAIpQLScIxhwD3TAbjcgy6QvDfedgKuA0QwvVdy71nKYPoWOWM7s_zA/viewform?usp=sf_link",
       targettext: "",
       targetlink: "",
     },

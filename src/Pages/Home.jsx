@@ -14,12 +14,6 @@ const Home = () => {
   const [referralCode, setReferralCode] = useState("");
   const { isCodeValid, checking, verifyReferralCode } = useReferralVerification();
 
-
-  const handleClick = () => {
-    setShowMessage(true);
-    setTimeout(() => setShowMessage(false), 2000); // Reverts back after 2 sec
-  };
-
   const handleVerify = () => {
     verifyReferralCode(referralCode);
   };
@@ -64,27 +58,38 @@ const Home = () => {
               <div className="absolute inset-0 bg-sky-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-full"></div>
             </button>
           </a> */}
-          <div className="flex gap-4 opacity-0 animate-[fadeIn_1s_ease-out_1s_forwards] ">
+          <div className="flex flex-col md:flex-row gap-4 w-full items-center">
             <motion.a
-              onClick={handleClick}
+              href=""
               target="_blank"
-              className="group relative px-8 py-3 text-lg md:text-xl overflow-hidden rounded-full border-2 border-blue-400 text-blue-400 transition-all duration-300 hover:text-white hover:bg-blue-400"
+              className="group relative w-full md:w-auto text-center px-8 py-3 text-lg md:text-xl overflow-hidden rounded-full border-2 border-blue-400 text-blue-400 transition-all duration-300 hover:text-white hover:bg-blue-400"
             >
-              {showMessage ? (
-                <span className="text-red-500 font-bold">Coming Soon</span>
-              ) : (
-                "View Schedule"
-              )}
+              View Brochure
             </motion.a>
-            <button
-              onClick={() => setShowDialog(true)}
-              className="px-8 py-3 rounded-full border-2 border-sky-400 text-sky-400 hover:bg-sky-400 hover:text-white"
+
+            <motion.a
+              href="https://docs.google.com/forms/d/e/1FAIpQLScvA8sc-eosVlQm7BNMeidlB03mp5K9M4veIgCBRH2XRnqX-A/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full md:w-auto text-center px-8 py-3 rounded-full border-2 border-sky-400 text-sky-400 hover:bg-sky-400 hover:text-white"
             >
               Register Now
-            </button>
+            </motion.a>
+
+            <motion.a
+              onClick={() => {
+                document.getElementById("ca").scrollIntoView({ behavior: "smooth" });
+              }}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full md:w-auto text-center px-8 py-3 rounded-full border-2 border-sky-400 text-sky-400 hover:bg-sky-400 hover:text-white"
+            >
+              Become CA
+            </motion.a>
           </div>
+
         </div>
-        {showDialog && (
+        {/* {showDialog && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -148,8 +153,8 @@ const Home = () => {
                     onClick={handleVerify}
                     disabled={checking || !referralCode}
                     className={`w-full py-3 rounded-lg font-semibold transition-all ${checking
-                        ? "bg-blue-400 cursor-not-allowed"
-                        : "bg-blue-500 hover:bg-blue-600"
+                      ? "bg-blue-400 cursor-not-allowed"
+                      : "bg-blue-500 hover:bg-blue-600"
                       } text-white`}
                   >
                     {checking ? (
@@ -171,8 +176,8 @@ const Home = () => {
                       onClick={() => window.open("https://docs.google.com/forms/d/e/1FAIpQLSeLJH64UyqRWh59RX9tkMvlTdGHM-kU56PHKWUImnLLydSgtg/viewform", "_blank")}
                       disabled={!isCodeValid}
                       className={`w-full py-2.5 rounded-lg font-medium transition-all ${isCodeValid
-                          ? "bg-green-500 hover:bg-green-600 text-white"
-                          : "bg-gray-200 text-gray-400 cursor-not-allowed"
+                        ? "bg-green-500 hover:bg-green-600 text-white"
+                        : "bg-gray-200 text-gray-400 cursor-not-allowed"
                         }`}
                     >
                       Continue Registration with Referral
@@ -186,31 +191,31 @@ const Home = () => {
                       className="w-full py-3 rounded-lg font-bold bg-gradient-to-r from-sky-400 to-blue-500 hover:from-yellow-300 hover:to-amber-400 transition-all transform hover:scale-[1.02] shadow-lg hover:shadow-xl group"
                     >
 
-<motion.div
-    className="text-white-500 font-bold flex flex-col items-center justify-center"
-    whileHover={{ scale: 0.98 }}
-  >
-    <div className="flex items-center gap-3"> 
-      <div className="flex items-center gap-3">
-        <span className="text-white text-lg font-bold">Claim</span>
-        <span
-          className="text-white-500 font-bold animate-pulse"
-        >
-          Early Bird Offer!
-        </span>
-      </div>
-    </div>
-    <div className="text-sm font-medium text-amber-100 mt-1 opacity-90 group-hover:opacity-100">
-      Click to Continue Registration
-    </div>
-  </motion.div>
+                      <motion.div
+                        className="text-white-500 font-bold flex flex-col items-center justify-center"
+                        whileHover={{ scale: 0.98 }}
+                      >
+                        <div className="flex items-center gap-3">
+                          <div className="flex items-center gap-3">
+                            <span className="text-white text-lg font-bold">Claim</span>
+                            <span
+                              className="text-white-500 font-bold animate-pulse"
+                            >
+                              Early Bird Offer!
+                            </span>
+                          </div>
+                        </div>
+                        <div className="text-sm font-medium text-amber-100 mt-1 opacity-90 group-hover:opacity-100">
+                          Click to Continue Registration
+                        </div>
+                      </motion.div>
                     </button>
                   </div>
                 </div>
               </div>
             </motion.div>
           </motion.div>
-        )}
+        )} */}
 
         {/* Right Section - Spread-Out Pharma Icons */}
         <div className="hidden lg:flex w-full lg:w-2/5 h-[80vh] relative">

@@ -19,7 +19,8 @@ const Home = () => {
   };
 
   return (
-    <div className="min-h-screen w-full pt-20 relative ">
+    <div className="min-h-screen w-full pt-20 relative ">      
+      
       {/* Main Content */}
       <div className="container mx-auto px-8 flex flex-col lg:flex-row items-center">
         {/* Left Section */}
@@ -46,21 +47,9 @@ const Home = () => {
             </span>
           </div>
 
-          {/* Buttons */}
-          {/* <a
-            href="https://drive.google.com/file/d/1pYQbkwUnh6I-bSo8-yMyvb_eaDVUHijw/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block"
-          >
-            <button className="group relative px-8 py-3 text-lg md:text-xl overflow-hidden rounded-full border-2 border-sky-600 text-sky-600 transition-all duration-300 hover:text-white">
-              <span className="relative z-10">View Schedule</span>
-              <div className="absolute inset-0 bg-sky-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-full"></div>
-            </button>
-          </a> */}
           <div className="flex flex-col md:flex-row gap-4 w-full items-center">
             <motion.a
-              href=""
+              href="https://drive.google.com/file/d/1FAkV-WOO_1N-cOnXvnrKE3Fb99C9C2jL/view?usp=sharing"
               target="_blank"
               className="group relative w-full md:w-auto text-center px-8 py-3 text-lg md:text-xl overflow-hidden rounded-full border-2 border-blue-400 text-blue-400 transition-all duration-300 hover:text-white hover:bg-blue-400"
             >
@@ -87,6 +76,7 @@ const Home = () => {
               Become CA
             </motion.a>
           </div>
+          
 
         </div>
         {/* {showDialog && (
@@ -310,6 +300,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      
     </div>
   );
 };

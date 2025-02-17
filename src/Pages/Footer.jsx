@@ -1,35 +1,61 @@
-/** @format */
-
 import React from "react";
 import { FaFacebookSquare, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { RiTwitterXFill } from "react-icons/ri";
 
-const Footer1 = () => {
+const Footer = () => {
   return (
     <footer
       id="footer"
       className="bg-white py-12 px-6 md:px-12 lg:px-24 shadow-inner text-center"
     >
       {/* Main Container */}
-      <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+      <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 md:divide-x md:divide-gray-300">
         {/* Left Section */}
-        <div className="space-y-4 md:w-2/3 lg:w-1/2 text-center md:text-left">
-          <p className="text-sky-500 font-bold text-lg">
-            
-          </p>
+        <div className="md:col-span-2 pr-6">
           <h1 className="text-xl md:text-2xl font-bold text-gray-800">
             SPIRIT
           </h1>
           <p className="text-sky-500 font-semibold text-lg">
             The Annual Techno-Pharma Conference
           </p>
-          <div className="mt-6 space-y-2">
-            <div className="flex items-center justify-center md:justify-start gap-2">
-              <h1 className="text-sky-500 font-medium">Mobile:</h1>
-              <p className="text-gray-700 font-bold text-lg">+91 9370507730</p>
+
+          <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:divide-x sm:divide-gray-300">
+            {/* Left Inner Div */}
+            <div className="relative p-4 rounded-lg before:absolute before:inset-0 before:bg-gradient-radial before:from-gray-100 before:to-transparent before:rounded-lg before:z-[-1]">
+              <p className="text-gray-700 font-bold">
+                <span className="block text-sky-500">Events:</span>
+                <a
+                  href="mailto:saumya.ranjan.phe22@itbhu.ac.in"
+                  className="hover:underline"
+                >
+                  saumya.ranjan.phe22@itbhu.ac.in
+                </a>
+              </p>
+              <span className="text-gray-500 font-bold">+91 63628 72919</span>
+
+
             </div>
-            <div className="flex items-center justify-center md:justify-start gap-2">
-              <h1 className="text-sky-500 font-medium">Email us:</h1>
+
+            {/* Right Inner Div */}
+            <div className="relative p-4 rounded-lg before:absolute before:inset-0 before:bg-gradient-radial before:from-gray-100 before:to-transparent before:rounded-lg before:z-[-1]">
+              <h2 className="text-sky-500 font-bold">Registrations:</h2>
+              <p className="text-gray-700 font-bold text-lg">
+                <a
+                  href="mailto:dhruv.raghav.phe22@itbhu.ac.in"
+                  className="hover:underline"
+                >
+                  dhruv.raghav.phe22@itbhu.ac.in
+                </a>
+              </p>
+              <span className="text-gray-500 font-bold">+91 84496 20050</span>
+            </div>
+          </div>
+
+
+          {/* Social Media Links */}
+          <div className="md:flex-col">
+            <div className=" mt-6">
+              <h1 className="text-sky-500 font-bold">Email us:</h1>
               <p className="text-gray-700 font-bold text-lg">
                 <a
                   href="mailto:spirit@iitbhu.ac.in"
@@ -39,76 +65,57 @@ const Footer1 = () => {
                 </a>
               </p>
             </div>
-            <div className="flex:colspan items-center justify-center md:justify gap-2">
-              <h1 className="text-sky-500 font-medium">For Queries:</h1>
-              <div>
-              <h2 className="text-sky-500 font-medium">Events</h2>
-              <p className="text-gray-700 font-bold text-lg">
-                <a
-                  href="mailto:sahil.bharadwaj.phe22@itbhu.ac.in"
-                  className="hover:underline"
-                >
-                  sahil.bharadwaj.phe22@itbhu.ac.in
-                </a>
-              </p>
-              <h2 className="text-sky-500 font-medium">Registrations</h2>
-              <p className="text-gray-700 font-bold text-lg">
-                <a
-                  href="mailto:dhruv.raghav.phe22@itbhu.ac.in"
-                  className="hover:underline"
-                >
-                  dhruv.raghav.phe22@itbhu.ac.in
-                </a>
-                </p>
-                </div>
+            <div className="mt-6 flex justify-center md:justify-center gap-10">
+              <a
+                href="https://www.facebook.com/IITBHUSPIRIT/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sky-500 hover:text-sky-600 transition duration-300"
+              >
+                <FaFacebookSquare size={40} />
+              </a>
+              <a
+                href="https://www.instagram.com/spirit.iit.bhu?igsh=bWZnYXpmOXh4MGVx"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sky-500 hover:text-sky-600 transition duration-300"
+              >
+                <FaInstagram size={40} />
+              </a>
+              <a
+                href="https://twitter.com/Spirit_IIT"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sky-500 hover:text-sky-600 transition duration-300"
+              >
+                <RiTwitterXFill size={40} />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/spiritiitbhu/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sky-500 hover:text-sky-600 transition duration-300"
+              >
+                <FaLinkedin size={40} />
+              </a>
             </div>
 
           </div>
         </div>
 
-        {/* Right Section */}
-        <div className="space-y-4 text-center md:text-right">
-          <button className="px-6 py-3 text-sky-500 font-medium border border-sky-500 rounded-full hover:bg-sky-500 hover:text-white transition duration-300">
-            Contact Us
-          </button>
-          <div className="flex justify-center md:justify-end gap-6">
-            <a
-              href="https://www.facebook.com/IITBHUSPIRIT/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="icon-theme hover:text-sky-600 transition duration-300"
-            >
-              <FaFacebookSquare size={30} />
-            </a>
-            <a
-              href="https://www.instagram.com/spirit.iit.bhu?igsh=bWZnYXpmOXh4MGVx"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="icon-theme hover:text-sky-600 transition duration-300"
-            >
-              <FaInstagram size={30} />
-            </a>
-            <a
-              href="https://twitter.com/Spirit_IIT"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="icon-theme hover:text-sky-600 transition duration-300"
-            >
-              <RiTwitterXFill size={30} />
-            </a>
-            <a
-              href="https://www.linkedin.com/company/spiritiitbhu/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="icon-theme hover:text-sky-600 transition duration-300"
-            >
-              <FaLinkedin size={30} />
-            </a>
-          </div>
+        {/* Right Section - Google Maps */}
+        <div className="w-full h-48 md:h-full md:pl-6">
+          <iframe
+            className="w-full h-full rounded-lg"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.4530750718776!2d82.9924983!3d25.259113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e317ffd66d46d%3A0x521528ee980cba9b!2sDepartment%20of%20Pharmaceutical%20Engineering%20%26%20Technology%2C%20IIT%20BHU%20VARANASI.!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
       </div>
     </footer>
   );
 };
 
-export default Footer1;
+export default Footer;

@@ -62,25 +62,25 @@ const CARegistrationPage = () => {
             icon: StarIcon,
             title: "Exclusive Merchandise",
             description: "Get exclusive branded T-shirts, hoodies, and goodies for your efforts.",
-            bgImage: "./src/assets/merch.jpg",
+            bgImage: "./incentives/merch.jpg",
         },
         {
             icon: AcademicCapIcon,
             title: "Certificates",
             description: "Earn a certificate for your contribution to the community.",
-            bgImage: "./src/assets/certificates.jpg",
+            bgImage: "./incentives/certificates.jpg",
         },
         {
             icon: UserGroupIcon,
             title: "Cruise Networking Opportunities",
             description: "Interact with like-minded peers and industry leaders on an exclusive cruise as a once in a lifetime opportunity.",
-            bgImage: "./src/assets/cruise.jpg",
+            bgImage: "./incentives/cruise.jpg",
         },
         {
             icon: ChartBarIcon,
             title: "Full Access to SPIRIT",
             description: "Gain full access to interactive events, amazing workshops and much more.",
-            bgImage: "./src/assets/keynote.jpg",
+            bgImage: "./incentives/keynote.jpg",
         },
     ];
 

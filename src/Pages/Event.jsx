@@ -66,7 +66,7 @@ const getIcon = (eventName) => {
       return <FaLightbulb className="icon-animation icon-scale-hover icon-theme text-[8rem] opacity-80" />;
     // case "RxQuest: Quiz":
     //   return <FaQuestionCircle className="icon-animation icon-scale-hover icon-theme text-[8rem] opacity-80" />;
-      default:
+    default:
       return null;
   }
 };
@@ -101,9 +101,12 @@ const Card = ({ item }) => {
               href={item.targetlink}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm font-medium text-sky-500 hover:underline"
+              className="w-[70%]"
             >
-              {item.targettext}
+              <button className="w-full px-4 py-2 text-sm font-medium text-sky-500 border border-sky-400 rounded-full hover:bg-sky-500 hover:text-white transition-all">
+                {item.targettext}
+              </button>
+
             </a>
           )}
         </div>
@@ -116,23 +119,22 @@ const Events = () => {
   const eventsDB = [
     {
       eventName: "Poster Presentation",
-      buttontext: "Register Here",
+      buttontext: "View Opportunity",
       buttonlink: "https://unstop.com/events/canvas-of-innovation-spirit-25-iit-bhu-1384427",
-      targettext: "",
-      // targettext: "View Guidelines",
-      targetlink: "",
+      targettext: "View Brochure",
+      targetlink: "https://drive.google.com/file/d/11-6sYFvJU1yBi6ZMhNuEntCE9f_4BJAA/view?usp=sharing",
     },
     {
       eventName: "Bio-Hackathon",
-      buttontext: "Register Here",
+      buttontext: "View Opportunity",
       buttonlink: "https://unstop.com/hackathons/healthtech-and-ai-hackathon-spirit-25-iit-bhu-1384428",
       targettext: "",
       targetlink: "",
     },
     {
       eventName: "Synapse Strategy",
-      buttontext: "Register Here",
-      buttonlink:"https://unstop.com/competitions/synapse-strategy-spirit-25-indian-institute-of-technology-banaras-hindu-university-varanasi-1384936",
+      buttontext: "View Opportunity",
+      buttonlink: "https://unstop.com/competitions/synapse-strategy-spirit-25-indian-institute-of-technology-banaras-hindu-university-varanasi-1384936",
       // buttonlink: "https://forms.gle/peHFswNGD3m6BVcd8",
       targettext: "",
       targetlink: "",
@@ -141,10 +143,8 @@ const Events = () => {
 
   return (
     <div id="events" className="py-16">
+      <Abstract />
       <style>{styles}</style>
-      <div className="container mx-auto mb-8">
-        <Abstract />
-      </div>
 
       <div className="container mx-auto px-6 lg:px-12">
         <h1 className="text-center text-4xl font-bold text-sky-600 mb-12">

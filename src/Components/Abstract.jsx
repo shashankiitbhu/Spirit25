@@ -32,25 +32,16 @@ const Abstract = () => {
 
           <div className="space-y-4">
             {/* Interactive Button */}
-            {/* <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSe0pqvjp54J4QdtnqMqnuDJiJW7KBfkS6Kq6o9x3RCVJl2B-g/viewform"
+             <a
+              href="https://forms.gle/HsNCtpZ8fGpR7tVt9"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto inline-flex justify-center items-center px-6 py-3 text-base font-medium text-sky-500 border border-sky-400 rounded-full hover:bg-sky-500 hover:text-white transition-all"
             >
               <HiOutlineDocumentText className="mr-2 text-xl" />
               Submit Now
-            </a> */}
-             <motion.a
-                                  onClick={handleClick}
-                                  target="_blank"
-                      className="bg-gradient-to-r from-sky-500 to-sky-500 text-white px-6 py-3 rounded-lg font-medium hover:shadow-lg transition-shadow"                    >
-                                  {showMessage ? (
-                                    <span className="text-red-500 font-bold">Coming Soon</span>
-                                  ) : (
-                                    "Submit Now"
-                                  )}
-                                </motion.a>
+            </a> 
+            
           </div>
         </div>
       </div>

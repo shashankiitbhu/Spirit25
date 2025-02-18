@@ -100,7 +100,7 @@ const CARegistrationPage = () => {
                             <span className="font-bold text-yellow-400 ">Golden Pass</span> -your gateway to unparalleled opportunities, premium access, and career-defining experiences in pharma-tech!
                         </p>
                         <motion.a
-                            href="https://drive.google.com/file/d/1FAkV-WOO_1N-cOnXvnrKE3Fb99C9C2jL/view?usp=sharing"
+                            href="https://forms.gle/bc7XmF5iYzFHhRee9"
                             target="_blank"
                             className="group relative w-full md:w-auto text-center px-8 py-3 text-lg md:text-xl overflow-hidden rounded-full border-2 border-blue-400 text-blue-400 transition-all duration-300 hover:text-white hover:bg-blue-400"
                         >

@@ -62,21 +62,25 @@ const CARegistrationPage = () => {
             icon: StarIcon,
             title: "Exclusive Merchandise",
             description: "Get exclusive branded T-shirts, hoodies, and goodies for your efforts.",
+            bgImage: "./src/assets/merch.jpg",
         },
         {
             icon: AcademicCapIcon,
             title: "Certificates",
             description: "Earn a certificate for your contribution to the community.",
+            bgImage: "./src/assets/certificates.jpg",
         },
         {
             icon: UserGroupIcon,
             title: "Cruise Networking Opportunities",
             description: "Interact with like-minded peers and industry leaders on an exclusive cruise as a once in a lifetime opportunity.",
+            bgImage: "./src/assets/cruise.jpg",
         },
         {
             icon: ChartBarIcon,
             title: "Full Access to SPIRIT",
             description: "Gain full access to interactive events, amazing workshops and much more.",
+            bgImage: "./src/assets/keynote.jpg",
         },
     ];
 
@@ -122,20 +126,30 @@ const CARegistrationPage = () => {
                     <div className="container mx-auto px-4">
                         <h2 className="text-4xl font-bold text-center mb-12">What does the <span className="text-yellow-300">Golden Pass</span> Entail?</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                            {benefits.map(({ icon: Icon, title, description }, index) => (
+                            {benefits.map(({ icon: Icon, title, description, bgImage }, index) => (
                                 <div
                                     key={index}
                                     className="p-8 bg-white/5 rounded-2xl border border-white/10 transform transition-all 
-                                duration-300 hover:bg-white/20 hover:scale-105 group"
+            duration-300 hover:bg-white/20 hover:scale-105 group relative overflow-hidden"
+                                    style={{
+                                        backgroundImage: `url(${bgImage})`,
+                                        backgroundSize: "cover",
+                                        backgroundPosition: "center",
+                                    }}
                                 >
-                                    <div className="w-16 h-16 mb-6 bg-white/10 rounded-2xl flex items-center justify-center">
-                                        <Icon className="w-8 h-8 text-white group-hover:text-blue-400 transition-colors" />
+                                    <div className="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-all duration-300"></div>
+
+                                    <div className="relative z-10">
+                                        <div className="w-16 h-16 mb-6 bg-white/10 rounded-2xl flex items-center justify-center">
+                                            <Icon className="w-8 h-8 text-white group-hover:text-blue-400 transition-colors" />
+                                        </div>
+                                        <h3 className="text-2xl font-bold mb-4 text-white">{title}</h3>
+                                        <p className="text-gray-200 leading-relaxed">{description}</p>
                                     </div>
-                                    <h3 className="text-2xl font-bold mb-4">{title}</h3>
-                                    <p className="text-gray-200 leading-relaxed">{description}</p>
                                 </div>
                             ))}
                         </div>
+
                     </div>
                 </section>
 
@@ -171,8 +185,8 @@ const CARegistrationPage = () => {
                         ref={scrollRef}
                         className="flex space-x-8 px-6 md:px-16 overflow-x-auto scroll-smooth scrollbar-hidden flex-nowrap"
                         style={{
-                            scrollbarWidth: "none", // Firefox
-                            msOverflowStyle: "none", // Internet Explorer & Edge
+                            scrollbarWidth: "none", 
+                            msOverflowStyle: "none", 
                         }}
                     >
                         {testimonials.map((testimonial, index) => (
@@ -180,8 +194,8 @@ const CARegistrationPage = () => {
                                 key={index}
                                 className="flex flex-shrink-0 bg-white shadow-md rounded-xl p-6 items-center "
                                 style={{
-                                    width: window.innerWidth < 768 ? "85vw" : "50vw", // Increase width on desktop
-                                    maxWidth: "700px", // Prevent it from being too large
+                                    width: window.innerWidth < 768 ? "85vw" : "50vw", 
+                                    maxWidth: "700px", 
                                     height: "180px",
                                 }}
                             >

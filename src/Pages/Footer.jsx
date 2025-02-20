@@ -64,6 +64,8 @@ const Footer = () => {
                   spirit@iitbhu.ac.in
                 </a>
               </p>
+              <span className="text-gray-500 font-bold">+91 93705 07730</span>
+
             </div>
             <div className="mt-6 flex justify-center md:justify-center gap-10">
               <a

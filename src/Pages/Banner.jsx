@@ -13,7 +13,7 @@ const Banner = () => {
                 animate={{ x: "-100%" }}
                 transition={{ repeat: Infinity, duration: 12, ease: "linear" }}
             >
-                🚀 Early Bird Offer Till 21st Feb - <span className="line-through">₹2500</span> ₹2000/- |
+                🚀 Early Bird Offer Till 23rd Feb - <span className="line-through">₹2500</span> ₹2000/- |
                 <span>
                     <motion.a
                         href="https://docs.google.com/forms/d/e/1FAIpQLScvA8sc-eosVlQm7BNMeidlB03mp5K9M4veIgCBRH2XRnqX-A/viewform"

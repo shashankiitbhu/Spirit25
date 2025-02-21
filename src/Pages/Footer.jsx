@@ -19,8 +19,7 @@ const Footer = () => {
             The Annual Techno-Pharma Conference
           </p>
 
-          <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:divide-x sm:divide-gray-300">
-            {/* Left Inner Div */}
+          <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:divide-x sm:divide-gray-300">
             <div className="relative p-4 rounded-lg before:absolute before:inset-0 before:bg-gradient-radial before:from-gray-100 before:to-transparent before:rounded-lg before:z-[-1]">
               <p className="text-gray-700 font-bold">
                 <span className="block text-sky-500">Events:</span>
@@ -36,20 +35,33 @@ const Footer = () => {
 
             </div>
 
-            {/* Right Inner Div */}
             <div className="relative p-4 rounded-lg before:absolute before:inset-0 before:bg-gradient-radial before:from-gray-100 before:to-transparent before:rounded-lg before:z-[-1]">
               <h2 className="text-sky-500 font-bold">Registrations:</h2>
               <p className="text-gray-700 font-bold text-lg">
                 <a
                   href="mailto:dhruv.raghav.phe22@itbhu.ac.in"
-                  className="hover:underline"
+                  className="hover:underline truncate overflow-hidden text-ellipsis block w-full"
                 >
                   dhruv.raghav.phe22@itbhu.ac.in
                 </a>
               </p>
               <span className="text-gray-500 font-bold">+91 84496 20050</span>
             </div>
+            <div className="relative p-4 rounded-lg before:absolute before:inset-0 before:bg-gradient-radial before:from-gray-100 before:to-transparent before:rounded-lg before:z-[-1]">
+              <h2 className="text-sky-500 font-bold">Accomodations:</h2>
+              <p className="text-gray-700 font-bold text-lg">
+                <a
+                  href="mailto:solan.kumar.phe22@itbhu.ac.in"
+                  className="hover:underline truncate overflow-hidden text-ellipsis block w-full"
+                >
+                  solan.kumar.phe22@itbhu.ac.in
+                </a>
+              </p>
+              <span className="text-gray-500 font-bold">+91 62002 21897</span>
+            </div>
           </div>
+          
+        
 
 
           {/* Social Media Links */}

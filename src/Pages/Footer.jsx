@@ -48,7 +48,11 @@ const Footer = () => {
               <span className="text-gray-500 font-bold">+91 84496 20050</span>
             </div>
             <div className="relative p-4 rounded-lg before:absolute before:inset-0 before:bg-gradient-radial before:from-gray-100 before:to-transparent before:rounded-lg before:z-[-1]">
-              <h2 className="text-sky-500 font-bold">Accomodations:</h2>
+              <a
+                href="https://forms.gle/FdNtWmujJE9wgviy7"
+                target="_blank"
+                rel="noopener noreferrer"
+              ><h2 className="text-sky-500 font-bold">Accomodations:</h2></a>
               <p className="text-gray-700 font-bold text-lg">
                 <a
                   href="mailto:solan.kumar.phe22@itbhu.ac.in"

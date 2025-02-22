@@ -140,8 +140,8 @@ const Events = () => {
     },
     {
       eventName: "Fabrica Modelling",
-      buttontext: "Coming Soon",
-      butonlink: "",
+      buttontext: "View Opportunity",
+      butonlink: "https://forms.gle/oA8M5j3iRphTLbDV7",
       targettext: "",
       targetlink: "",
     },

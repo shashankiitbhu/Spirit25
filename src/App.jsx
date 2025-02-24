@@ -112,7 +112,6 @@ const App = () => {
                 <>
                   <Navbar />
                   <div className="pt-20"></div>
-                  <Banner />
                   <div id="home"><Home /></div>
                   <div id="about"><About /></div>
                   <div id="speakers"><Speakers /></div>

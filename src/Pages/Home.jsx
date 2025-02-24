@@ -193,7 +193,7 @@ const Home = () => {
                           </div>
                         </div> */}
                         <div className="text-sm font-bold text-amber-100 mt-1 opacity-90 group-hover:opacity-100">
-                          Continue Registration Witout Referral
+                          Open Registration
                         </div>
                       </motion.div>
                     </button>

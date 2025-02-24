@@ -52,7 +52,7 @@ const Footer = () => {
                 href="https://forms.gle/FdNtWmujJE9wgviy7"
                 target="_blank"
                 rel="noopener noreferrer"
-              ><h2 className="text-sky-500 font-bold">Accomodations:</h2></a>
+              ><h2 className="text-sky-500 font-bold">Accomodations: Form</h2></a>
               <p className="text-gray-700 font-bold text-lg">
                 <a
                   href="mailto:solan.kumar.phe22@itbhu.ac.in"

@@ -49,21 +49,20 @@ const Home = () => {
 
           <div className="flex flex-col md:flex-row gap-4 w-full items-center">
             <motion.a
-              href="https://drive.google.com/file/d/1FAkV-WOO_1N-cOnXvnrKE3Fb99C9C2jL/view?usp=sharing"
+              href="https://drive.google.com/file/d/1oPnMOPISoP_8DyHhCg5NXh-rV5GQWxXZ/view?usp=sharing"
               target="_blank"
               className="group relative w-full md:w-auto text-center px-8 py-3 text-lg md:text-xl overflow-hidden rounded-full border-2 border-blue-400 text-blue-400 transition-all duration-300 hover:text-white hover:bg-blue-400"
             >
               View Brochure
             </motion.a>
+            <button
+              onClick={() => setShowDialog(true)}
+              className="group relative w-full md:w-auto text-center px-8 py-3 text-lg md:text-xl overflow-hidden rounded-full border-2 border-blue-400 text-blue-400 transition-all duration-300 hover:text-white hover:bg-blue-400"
 
-            <motion.a
-              href="https://docs.google.com/forms/d/e/1FAIpQLScvA8sc-eosVlQm7BNMeidlB03mp5K9M4veIgCBRH2XRnqX-A/viewform"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full md:w-auto text-center px-8 py-3 rounded-full border-2 border-sky-400 text-sky-400 hover:bg-sky-400 hover:text-white"
             >
               Register Now
-            </motion.a>
+
+            </button>
 
             <motion.a
               onClick={() => {
@@ -79,7 +78,7 @@ const Home = () => {
           
 
         </div>
-        {/* {showDialog && (
+        {showDialog && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -172,9 +171,7 @@ const Home = () => {
                     >
                       Continue Registration with Referral
                     </button>
-                    <div className="flex items-center justify-center gap-2">
-                      <span className="font-bold">OR</span>
-                    </div>
+                    
 
                     <button
                       onClick={() => window.open("https://docs.google.com/forms/d/e/1FAIpQLScvA8sc-eosVlQm7BNMeidlB03mp5K9M4veIgCBRH2XRnqX-A/viewform?usp=header", "_blank")}
@@ -185,7 +182,7 @@ const Home = () => {
                         className="text-white-500 font-bold flex flex-col items-center justify-center"
                         whileHover={{ scale: 0.98 }}
                       >
-                        <div className="flex items-center gap-3">
+                        {/* <div className="flex items-center gap-3">
                           <div className="flex items-center gap-3">
                             <span className="text-white text-lg font-bold">Claim</span>
                             <span
@@ -194,9 +191,9 @@ const Home = () => {
                               Early Bird Offer!
                             </span>
                           </div>
-                        </div>
-                        <div className="text-sm font-medium text-amber-100 mt-1 opacity-90 group-hover:opacity-100">
-                          Click to Continue Registration
+                        </div> */}
+                        <div className="text-sm font-bold text-amber-100 mt-1 opacity-90 group-hover:opacity-100">
+                          Continue Registration Witout Referral
                         </div>
                       </motion.div>
                     </button>
@@ -205,7 +202,7 @@ const Home = () => {
               </div>
             </motion.div>
           </motion.div>
-        )} */}
+        )}
 
         {/* Right Section - Spread-Out Pharma Icons */}
         <div className="hidden lg:flex w-full lg:w-2/5 h-[80vh] relative">

@@ -49,7 +49,7 @@ const Home = () => {
 
           <div className="flex flex-col md:flex-row gap-4 w-full items-center">
             <motion.a
-              href="https://drive.google.com/file/d/1oPnMOPISoP_8DyHhCg5NXh-rV5GQWxXZ/view?usp=sharing"
+              href="https://drive.google.com/file/d/1som1vM3mUClUezBAO77yX2hGMcaBaiBd/view?usp=sharing"
               target="_blank"
               className="group relative w-full md:w-auto text-center px-8 py-3 text-lg md:text-xl overflow-hidden rounded-full border-2 border-blue-400 text-blue-400 transition-all duration-300 hover:text-white hover:bg-blue-400"
             >

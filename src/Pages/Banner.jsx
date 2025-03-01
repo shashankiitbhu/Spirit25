@@ -13,7 +13,7 @@ const Banner = () => {
                 animate={{ x: "-100%" }}
                 transition={{ repeat: Infinity, duration: 12, ease: "linear" }}
             >
-                🚀 Registration Deadline : <span className="animate-blink">28th February </span> | 
+                🚀 Registration Deadline : <span className="animate-blink">10th March </span> | 
                 <span>
                     <motion.a
                         href="https://docs.google.com/forms/d/e/1FAIpQLScvA8sc-eosVlQm7BNMeidlB03mp5K9M4veIgCBRH2XRnqX-A/viewform"

@@ -127,7 +127,7 @@ const Home = () => {
                     )}
                   </div>
 
-                  {isCodeValid === false && (
+                  {/* {isCodeValid === false && (
                     <motion.div
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -136,9 +136,9 @@ const Home = () => {
                       <GiChemicalDrop className="flex-shrink-0" />
                       <span>Invalid referral code. Please try again.</span>
                     </motion.div>
-                  )}
+                  )} */}
 
-                  <button
+                  {/* <button
                     onClick={handleVerify}
                     disabled={checking || !referralCode}
                     className={`w-full py-3 rounded-lg font-semibold transition-all ${checking
@@ -158,18 +158,14 @@ const Home = () => {
                     ) : (
                       "Verify Code"
                     )}
-                  </button>
+                  </button> */}
 
                   <div className="space-y-3">
                     <button
                       onClick={() => window.open("https://docs.google.com/forms/d/e/1FAIpQLSeLJH64UyqRWh59RX9tkMvlTdGHM-kU56PHKWUImnLLydSgtg/viewform", "_blank")}
-                      disabled={!isCodeValid}
-                      className={`w-full py-2.5 rounded-lg font-medium transition-all ${isCodeValid
-                        ? "bg-green-500 hover:bg-green-600 text-white"
-                        : "bg-gray-200 text-gray-400 cursor-not-allowed"
-                        }`}
+                      className={`w-full py-2.5 rounded-lg font-medium transition-all bg-blue-500 hover:bg-green-600 text-white`}
                     >
-                      Continue Registration with Referral
+                      Continue with Referral
                     </button>
                     
 
@@ -193,7 +189,7 @@ const Home = () => {
                           </div>
                         </div> */}
                         <div className="text-sm font-bold text-amber-100 mt-1 opacity-90 group-hover:opacity-100">
-                          Open Registration
+                          Continue without Referral
                         </div>
                       </motion.div>
                     </button>

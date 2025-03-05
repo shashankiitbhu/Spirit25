@@ -127,7 +127,7 @@ const Home = () => {
                     )}
                   </div>
 
-                  {/* {isCodeValid === false && (
+                  {isCodeValid === false && (
                     <motion.div
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -136,9 +136,9 @@ const Home = () => {
                       <GiChemicalDrop className="flex-shrink-0" />
                       <span>Invalid referral code. Please try again.</span>
                     </motion.div>
-                  )} */}
+                  )}
 
-                  {/* <button
+                  <button
                     onClick={handleVerify}
                     disabled={checking || !referralCode}
                     className={`w-full py-3 rounded-lg font-semibold transition-all ${checking
@@ -158,36 +158,28 @@ const Home = () => {
                     ) : (
                       "Verify Code"
                     )}
-                  </button> */}
+                  </button>
 
                   <div className="space-y-3">
                     <button
                       onClick={() => window.open("https://docs.google.com/forms/d/e/1FAIpQLSeLJH64UyqRWh59RX9tkMvlTdGHM-kU56PHKWUImnLLydSgtg/viewform", "_blank")}
-                      className={`w-full py-2.5 rounded-lg font-medium transition-all bg-blue-500 hover:bg-green-600 text-white`}
+                      disabled={!isCodeValid}
+                      className={`w-full py-2.5 rounded-lg font-medium transition-all ${isCodeValid
+                        ? "bg-blue-500 hover:bg-green-600"
+                        : "bg-blue-300 cursor-not-allowed"
+                        } text-white`}
                     >
                       Continue with Referral
                     </button>
-                    
 
                     <button
                       onClick={() => window.open("https://docs.google.com/forms/d/e/1FAIpQLScvA8sc-eosVlQm7BNMeidlB03mp5K9M4veIgCBRH2XRnqX-A/viewform?usp=header", "_blank")}
                       className="w-full py-3 rounded-lg font-bold bg-gradient-to-r from-sky-400 to-blue-500 hover:from-yellow-300 hover:to-amber-400 transition-all transform hover:scale-[1.02] shadow-lg hover:shadow-xl group"
                     >
-
                       <motion.div
                         className="text-white-500 font-bold flex flex-col items-center justify-center"
                         whileHover={{ scale: 0.98 }}
                       >
-                        {/* <div className="flex items-center gap-3">
-                          <div className="flex items-center gap-3">
-                            <span className="text-white text-lg font-bold">Claim</span>
-                            <span
-                              className="text-white-500 font-bold animate-pulse"
-                            >
-                              Early Bird Offer!
-                            </span>
-                          </div>
-                        </div> */}
                         <div className="text-sm font-bold text-amber-100 mt-1 opacity-90 group-hover:opacity-100">
                           Continue without Referral
                         </div>
@@ -199,7 +191,6 @@ const Home = () => {
             </motion.div>
           </motion.div>
         )}
-
         {/* Right Section - Spread-Out Pharma Icons */}
         <div className="hidden lg:flex w-full lg:w-2/5 h-[80vh] relative">
           <div className="absolute inset-0">

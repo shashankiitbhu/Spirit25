@@ -14,6 +14,7 @@ import Particles from "react-tsparticles";
 import Testimonials from "./Pages/Testimonials";
 import { loadFull } from "tsparticles";
 import Banner from "./Pages/Banner";
+import NewSpeakers from "./Pages/NewSpeakers";
 
 const App = () => {
   const particlesInit = async (main) => {
@@ -115,6 +116,7 @@ const App = () => {
                   <Banner />
                   <div id="home"><Home /></div>
                   <div id="about"><About /></div>
+                  <div id="new_speakers"><NewSpeakers /></div>
                   <div id="speakers"><Speakers /></div>
                   <div id="ca"><CA /></div>
                   <div id="events"><Event /></div>

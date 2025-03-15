@@ -14,9 +14,11 @@ import Particles from "react-tsparticles";
 import Testimonials from "./Pages/Testimonials";
 import { loadFull } from "tsparticles";
 import Banner from "./Pages/Banner";
+import VirtualConferrence from "./Pages/VirtualConferrence";
 import NewSpeakers from "./Pages/NewSpeakers";
 
 const App = () => {
+
   const particlesInit = async (main) => {
     // Initialize tsParticles instance
     await loadFull(main);
@@ -119,6 +121,7 @@ const App = () => {
                   <div id="new_speakers"><NewSpeakers /></div>
                   <div id="speakers"><Speakers /></div>
                   <div id="ca"><CA /></div>
+                  <div id="virtual_conferrence"><VirtualConferrence /></div>
                   <div id="events"><Event /></div>
                   <div id="testimonials"><Testimonials /></div>
                   <div id="footer1"><Footer1 /></div>
@@ -126,6 +129,8 @@ const App = () => {
               }
             />
             <Route path="/ca-registration" element={<CARegistrationPage />} />
+            <Route path="/virtual-conferrence" element={<VirtualConferrence />} />
+
           </Routes>
         </div>
 

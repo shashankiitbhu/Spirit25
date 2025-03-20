@@ -55,6 +55,34 @@ const NewSpeakers = () => {
             des: "Senior Technical Advisor",
             company: "IPA",
             logo: "./new_speakers/ipa.png",
+        },
+        {
+            name: "Dr. Saurabh Kumar",
+            image: "./new_speakers/saurabh_kumar.jpeg",
+            des: "Principal & Head RWE",
+            company: "IQVIA",
+            logo: "./new_speakers/iqvia_logo.jpeg",
+        },
+        {
+            name: "Dr. Anand Agarwal",
+            image: "./new_speakers/anand_agarwal.jpg",
+            des: "Senior Vice President",
+            company: "Cipla",
+            logo: "./new_speakers/cipla_logo.jpeg",
+        },
+        {
+            name: "Dr. P. A. Sivakumar",
+            image: "./new_speakers/dr_pa_sivakumar.jpg",
+            des: "Vice President",
+            company: "Biological E. Limited",
+            logo: "./new_speakers/biological_e_logo.jpeg",
+        },
+        {
+            name: " Nitesh Kumar",
+            image: "./new_speakers/nitesh_kumar.jpg",
+            des: "Co-Founder",
+            company: "Leumas",
+            logo: "./new_speakers/leumasware_logo.jpeg",
         }
     ];
 
@@ -69,9 +97,6 @@ const NewSpeakers = () => {
                         <NewSpeakerCard item={item} key={index} />
                     ))}
                 </div>
-                <h4 className="text-2xl font-bold text-sky-600 text-center mb-12">
-                    Adding more ESA...
-                </h4>
             </div>
         </div>
     );
